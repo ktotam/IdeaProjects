@@ -34,7 +34,7 @@ public class PageServiceImpl implements PageService {
     public void newPost(String post, Long id) {
         Posts newPost = Posts.builder()
                 .post(post)
-                .
+                //.
                 .build();
         postsRepository.save(newPost);
                 

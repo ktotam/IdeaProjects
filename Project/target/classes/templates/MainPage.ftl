@@ -16,7 +16,7 @@
         <#list posts as post>
             <tr>
                 <td>
-                    ${post}
+                    ${post.post}
                 </td>
             </tr>
         </#list>

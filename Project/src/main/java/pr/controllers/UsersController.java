@@ -29,11 +29,10 @@ public class UsersController {
     }
 
     @GetMapping("/page/{user-id}")
-    @ResponseBody
     public String getPage(ModelMap model, @PathVariable("user-id") Long userId) {
         List<PostsDto> posts = pageService.getPosts(userId);
         model.addAttribute("posts", posts);
-        return "Page";
+        return "PostsPage";
     }
   
 
