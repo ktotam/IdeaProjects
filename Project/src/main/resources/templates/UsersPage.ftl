@@ -3,20 +3,20 @@
 <head>
     <meta charset="UTF-8">
     <title>Users</title>
-    <link rel="stylesheet" type="text/css" href="/css/style.css"/>
+    <link rel="stylesheet" type="text/css" href="css/style.css"/>
 </head>
 <body>
 <div class="names">
     <table>
         <tr>
             <th>
-                Привет
+                Логин
             </th>
         </tr>
-        <#list names as name>
+        <#list users as user>
             <tr>
                 <td>
-                    ${name}
+                    ${user.login}
                 </td>
             </tr>
         </#list>

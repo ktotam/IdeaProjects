@@ -6,6 +6,8 @@ import lombok.Data;
 import lombok.NoArgsConstructor;
 
 import javax.persistence.*;
+import java.util.ArrayList;
+import java.util.List;
 
 @Data
 @NoArgsConstructor
@@ -22,9 +24,14 @@ public class User {
     private String name;
     private String surname;
     private Integer age;
+
+    @Column(unique = true)
     private String login;
 
     @Column(name = "hash_password")
     private String hashPassword;
 
+    @OneToMany(mappedBy = "user")
+    private List<Posts> posts;
 }
+

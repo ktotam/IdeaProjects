@@ -1,5 +1,7 @@
 package pr.services;
 
+import org.springframework.security.crypto.password.PasswordEncoder;
+import pr.dto.UserDto;
 import pr.forms.UserForm;
 import pr.models.User;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -15,22 +17,30 @@ public class UsersServiceImpl implements UsersService {
     @Autowired
     private UsersRepository usersRepository;
 
-    public List<String> getAllNames() {
+    @Autowired
+    private PasswordEncoder passwordEncoder;
+
+    public List<UserDto> getAllUsers() {
         List<User> users = usersRepository.findAll();
 
-        List<String> names = new ArrayList<String>();
+        List<UserDto> userDtos = new ArrayList<>();
         for (User user : users) {
-            names.add(user.getName());
+            userDtos.add(UserDto.builder()
+                    .id(user.getId())
+                    .login(user.getLogin())
+                    .build());
         }
-        return names;
+        return userDtos;
     }
 
     public void addUser(UserForm user) {
+        String hashPassword = passwordEncoder.encode(user.getPassword());
         User newUser = User.builder()
                 .login(user.getLogin())
                 .name(user.getName())
+                .age((user.getAge()))
+                .hashPassword(hashPassword)
                 .build();
-
         usersRepository.save(newUser);
     }
 }

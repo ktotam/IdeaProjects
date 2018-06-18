@@ -9,7 +9,7 @@ import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.ControllerAdvice;
 
 @SpringBootApplication
-@ComponentScan("pr.services")
+@ComponentScan("pr")
 @EntityScan(basePackages = "pr.models")
 @EnableJpaRepositories(basePackages = "pr.repositories")
 @Controller("pr.controllers")
