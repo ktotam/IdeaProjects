@@ -1,20 +1,49 @@
 <#ftl encoding='UTF-8'>
-<html>
+<!DOCTYPE html>
+<html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <title>Sign In</title>
-    <link rel="stylesheet" type="text/css" href="css/style.css"/>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+
+    <style type="text/css">
+        body {
+            background-image: url(http://www.joburgchiropractor.co.za/images/background.jpg);
+        }
+    </style>
 </head>
 <body>
-<div class="form-style-6">
-    <form action="/signIn" method="post">
-        <input type="text" name="login" placeholder="Login" />
-        <input type="password" name="password" placeholder="Password" />
-        <input type="submit" value="Sign In"/>
-    </form>
-    <form action="/signUp" method="get">
-        <input type="submit" value="Sign Up">
-    </form>
+
+<div class="container" style="margin-top: 5%;">
+    <div class="row">
+        <div class="col-sm-4"> </div>
+        <div class="col-md-4">
+
+            <h1 class="text-center text-success">Sign In</h1>
+            <br/>
+            <div class="tab-content">
+                <div id="home" class="tab-pane fade in active">
+
+                    <form>
+
+                        <div class="form-group">
+                            <label for="UserName">Login</label>
+                            <input type="text" class="form-control" name="login">
+                        </div>
+
+                        <div class="form-group">
+                            <label for="password">Password</label>
+                            <input type="password" class="form-control" name="password">
+                        </div>
+
+                        <button type="submit" formaction="signIn" formmethod="post" class="btn btn-lg btn-success">Sign In</button>
+                        <a href="/signUp" class="pull-right btn btn-default btn-lg" > Sign Up   </a>
+                    </form>
+
+                </div>
+            </div>
+        </div>
+    </div>
 </div>
 </body>
 </html>

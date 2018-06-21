@@ -70,8 +70,8 @@
     <schema id="15" parent="3" name="public">
       <ObjectId>2200</ObjectId>
       <Comment>standard public schema</Comment>
-      <IntrospectionTimestamp>2018-06-18.15:06:41.709</IntrospectionTimestamp>
-      <IntrospectionStateNumber>661</IntrospectionStateNumber>
+      <IntrospectionTimestamp>2018-06-21.04:21:05.286</IntrospectionTimestamp>
+      <IntrospectionStateNumber>677</IntrospectionStateNumber>
       <Current>1</Current>
       <Visible>1</Visible>
     </schema>
@@ -139,7 +139,7 @@
     </table>
     <table id="25" parent="15" name="users_posts">
       <ObjectId>24730</ObjectId>
-      <StateNumber>661</StateNumber>
+      <StateNumber>675</StateNumber>
     </table>
     <column id="26" parent="24" name="id">
       <Position>1</Position>
@@ -174,34 +174,28 @@
       <StateNumber>657</StateNumber>
       <TypeId>1043</TypeId>
     </column>
-    <column id="31" parent="24" name="surname">
-      <Position>6</Position>
-      <DataType>varchar(255)|0s</DataType>
-      <StateNumber>657</StateNumber>
-      <TypeId>1043</TypeId>
-    </column>
-    <index id="32" parent="24" name="service_user_pkey">
+    <index id="31" parent="24" name="service_user_pkey">
       <ObjectId>24726</ObjectId>
       <ColNames>id</ColNames>
       <Unique>1</Unique>
     </index>
-    <index id="33" parent="24" name="uk_ml01vi63x4qf3wgfuohlk6ej0">
+    <index id="32" parent="24" name="uk_ml01vi63x4qf3wgfuohlk6ej0">
       <ObjectId>24736</ObjectId>
       <ColNames>login</ColNames>
       <Unique>1</Unique>
     </index>
-    <key id="34" parent="24" name="service_user_pkey">
+    <key id="33" parent="24" name="service_user_pkey">
       <ObjectId>24727</ObjectId>
       <ColNames>id</ColNames>
       <UnderlyingIndexName>service_user_pkey</UnderlyingIndexName>
       <Primary>1</Primary>
     </key>
-    <key id="35" parent="24" name="uk_ml01vi63x4qf3wgfuohlk6ej0">
+    <key id="34" parent="24" name="uk_ml01vi63x4qf3wgfuohlk6ej0">
       <ObjectId>24737</ObjectId>
       <ColNames>login</ColNames>
       <UnderlyingIndexName>uk_ml01vi63x4qf3wgfuohlk6ej0</UnderlyingIndexName>
     </key>
-    <column id="36" parent="25" name="id">
+    <column id="35" parent="25" name="id">
       <Position>1</Position>
       <DataType>bigint|0s</DataType>
       <NotNull>1</NotNull>
@@ -210,30 +204,42 @@
       <TypeId>20</TypeId>
       <SequenceName>users_posts_id_seq</SequenceName>
     </column>
-    <column id="37" parent="25" name="post">
+    <column id="36" parent="25" name="post">
       <Position>2</Position>
       <DataType>varchar(255)|0s</DataType>
       <StateNumber>658</StateNumber>
       <TypeId>1043</TypeId>
     </column>
-    <column id="38" parent="25" name="user_id">
+    <column id="37" parent="25" name="user_id">
       <Position>3</Position>
       <DataType>bigint|0s</DataType>
       <StateNumber>658</StateNumber>
       <TypeId>20</TypeId>
     </column>
-    <index id="39" parent="25" name="users_posts_pkey">
+    <column id="38" parent="25" name="headline">
+      <Position>4</Position>
+      <DataType>varchar(255)|0s</DataType>
+      <StateNumber>671</StateNumber>
+      <TypeId>1043</TypeId>
+    </column>
+    <column id="39" parent="25" name="user_name">
+      <Position>5</Position>
+      <DataType>varchar|0s</DataType>
+      <StateNumber>675</StateNumber>
+      <TypeId>1043</TypeId>
+    </column>
+    <index id="40" parent="25" name="users_posts_pkey">
       <ObjectId>24734</ObjectId>
       <ColNames>id</ColNames>
       <Unique>1</Unique>
     </index>
-    <key id="40" parent="25" name="users_posts_pkey">
+    <key id="41" parent="25" name="users_posts_pkey">
       <ObjectId>24735</ObjectId>
       <ColNames>id</ColNames>
       <UnderlyingIndexName>users_posts_pkey</UnderlyingIndexName>
       <Primary>1</Primary>
     </key>
-    <foreign-key id="41" parent="25" name="fkfsnunxco8d0hrkbac7orc46fv">
+    <foreign-key id="42" parent="25" name="fkfsnunxco8d0hrkbac7orc46fv">
       <ObjectId>24738</ObjectId>
       <ColNames>user_id</ColNames>
       <RefTableId>24719</RefTableId>

@@ -6,8 +6,9 @@ import org.springframework.ui.ModelMap;
 import org.springframework.web.bind.annotation.*;
 import pr.dto.PostsDto;
 import pr.dto.UserDto;
+import pr.forms.SearchForm;
 import pr.forms.UserForm;
-import pr.services.PageService;
+import pr.services.PostsService;
 import pr.services.UsersService;
 
 import java.util.List;
@@ -19,7 +20,7 @@ public class UsersController {
     private UsersService usersService;
 
     @Autowired
-    private PageService pageService;
+    private PostsService postsService;
 
     @GetMapping("/users")
     public String getUsersPage(ModelMap model) {
@@ -28,18 +29,29 @@ public class UsersController {
         return "UsersPage";
     }
 
-    @GetMapping("/page/{user-id}")
+    @GetMapping("/user/{user-id}")
     public String getPage(ModelMap model, @PathVariable("user-id") Long userId) {
-        List<PostsDto> posts = pageService.getPosts(userId);
+        List<PostsDto> posts = postsService.getPosts(userId);
         model.addAttribute("posts", posts);
         return "PostsPage";
     }
-  
 
-    @PostMapping("/page")
+    @PostMapping("/user")
     public String addUser(UserForm user) {
         usersService.addUser(user);
-        return "redirect:/page";
+        return "redirect:/user";
+    }
+
+    @GetMapping("/search")
+    public String search(ModelMap model, SearchForm text) {
+        List<PostsDto> posts = postsService.searchPosts(text.getText());
+        model.addAttribute("posts", posts);
+        return "SearchPage";
+    }
+
+    @GetMapping("/user")
+    public String userPage(){
+        return "redirect:/user/" + "1";
     }
 
     @GetMapping("/signUp")

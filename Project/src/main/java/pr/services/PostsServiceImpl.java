@@ -5,16 +5,31 @@ import org.springframework.stereotype.Component;
 import pr.dto.PostsDto;
 import pr.models.Posts;
 import pr.repositories.PostsRepository;
-import pr.repositories.UsersRepository;
 
 import java.util.ArrayList;
 import java.util.List;
 
 @Component
-public class PageServiceImpl implements PageService {
+public class PostsServiceImpl implements PostsService {
 
     @Autowired
     private PostsRepository postsRepository;
+
+    @Override
+    public List<PostsDto> searchPosts(String text) {
+        List<Posts> posts = postsRepository.findPostsByPostContainsOrderByIdDesc(text);
+
+        List<PostsDto> postsDtos = new ArrayList<>();
+        for (Posts tempPost : posts) {
+            postsDtos.add(PostsDto.builder()
+                    .userName(tempPost.getUserName())
+                    .headline(tempPost.getHeadline())
+                    .post(tempPost.getPost())
+                    .userId(tempPost.getUserId())
+                    .build());
+        }
+        return postsDtos;
+    }
 
     @Override
     public List<PostsDto> getPosts(Long userId) {
@@ -23,6 +38,8 @@ public class PageServiceImpl implements PageService {
         List<PostsDto> postsDtos = new ArrayList<>();
         for (Posts tempPost : posts) {
             postsDtos.add(PostsDto.builder()
+                    .id(tempPost.getId())
+                    .headline(tempPost.getHeadline())
                     .post(tempPost.getPost())
                     .userId(tempPost.getUserId())
                     .build());

@@ -20,6 +20,10 @@ public class Posts {
     private Long id;
 
     private String post;
+    private String headline;
+
+    @Column(name = "user_name")
+    private String userName;
 
     @ManyToOne
     @JoinColumn(name = "user_id")
@@ -28,7 +32,5 @@ public class Posts {
     public Long getUserId() {
         return user.getId();
     }
-
-    
 
 }

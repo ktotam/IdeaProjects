@@ -10,6 +10,7 @@ import org.springframework.security.config.annotation.web.configuration.WebSecur
 import org.springframework.security.core.userdetails.UserDetailsService;
 import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.security.crypto.password.PasswordEncoder;
+import org.springframework.security.web.authentication.logout.LogoutHandler;
 
 @Configuration
 public class SecurityConfig extends WebSecurityConfigurerAdapter {
@@ -30,7 +31,13 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
                 .formLogin()
                 .loginPage("/signIn")
                 .usernameParameter("login")
-                .defaultSuccessUrl("/users")
+                .defaultSuccessUrl("/user")
+                .permitAll()
+                .and()
+                .logout()
+                .logoutUrl("/logout")
+                .deleteCookies("JSESSIONID")
+                .invalidateHttpSession(true)
                 .permitAll();
         http.csrf().disable();
     }
