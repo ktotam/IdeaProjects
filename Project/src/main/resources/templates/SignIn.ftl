@@ -8,7 +8,7 @@
 
     <style type="text/css">
         body {
-            background-image: url(http://www.joburgchiropractor.co.za/images/background.jpg);
+            background-color: #E9F2F7;
         }
     </style>
 </head>

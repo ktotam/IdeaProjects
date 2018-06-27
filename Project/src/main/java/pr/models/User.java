@@ -22,8 +22,11 @@ public class User {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
     private String name;
-    private String surname;
     private Integer age;
+    private int followers;
+
+    
+    private Long avatarId;
 
     @Column(unique = true)
     private String login;
@@ -33,5 +36,6 @@ public class User {
 
     @OneToMany(mappedBy = "user")
     private List<Posts> posts;
+
 }
 

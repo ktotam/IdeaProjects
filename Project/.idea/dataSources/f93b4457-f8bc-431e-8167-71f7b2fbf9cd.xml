@@ -70,8 +70,8 @@
     <schema id="15" parent="3" name="public">
       <ObjectId>2200</ObjectId>
       <Comment>standard public schema</Comment>
-      <IntrospectionTimestamp>2018-06-21.04:21:05.286</IntrospectionTimestamp>
-      <IntrospectionStateNumber>677</IntrospectionStateNumber>
+      <IntrospectionTimestamp>2018-06-27.05:07:58.073</IntrospectionTimestamp>
+      <IntrospectionStateNumber>753</IntrospectionStateNumber>
       <Current>1</Current>
       <Visible>1</Visible>
     </schema>
@@ -117,7 +117,15 @@
       <HandlerId>335</HandlerId>
       <Type>index</Type>
     </access-method>
-    <sequence id="22" parent="15" name="service_user_id_seq">
+    <sequence id="22" parent="15" name="users_avatars_id_seq">
+      <ObjectId>24760</ObjectId>
+      <StateNumber>742</StateNumber>
+      <SequenceIdentity>1</SequenceIdentity>
+      <BelongsToColumn>1</BelongsToColumn>
+      <CacheSize>1</CacheSize>
+      <DataType>bigint</DataType>
+    </sequence>
+    <sequence id="23" parent="15" name="service_user_id_seq">
       <ObjectId>24717</ObjectId>
       <StateNumber>657</StateNumber>
       <SequenceIdentity>1</SequenceIdentity>
@@ -125,7 +133,7 @@
       <CacheSize>1</CacheSize>
       <DataType>bigint</DataType>
     </sequence>
-    <sequence id="23" parent="15" name="users_posts_id_seq">
+    <sequence id="24" parent="15" name="users_posts_id_seq">
       <ObjectId>24728</ObjectId>
       <StateNumber>658</StateNumber>
       <SequenceIdentity>1</SequenceIdentity>
@@ -133,15 +141,62 @@
       <CacheSize>1</CacheSize>
       <DataType>bigint</DataType>
     </sequence>
-    <table id="24" parent="15" name="service_user">
-      <ObjectId>24719</ObjectId>
-      <StateNumber>661</StateNumber>
+    <table id="25" parent="15" name="persistent_logins">
+      <ObjectId>24746</ObjectId>
+      <StateNumber>696</StateNumber>
     </table>
-    <table id="25" parent="15" name="users_posts">
+    <table id="26" parent="15" name="service_user">
+      <ObjectId>24719</ObjectId>
+      <StateNumber>741</StateNumber>
+    </table>
+    <table id="27" parent="15" name="users_avatars">
+      <ObjectId>24762</ObjectId>
+      <StateNumber>750</StateNumber>
+    </table>
+    <table id="28" parent="15" name="users_posts">
       <ObjectId>24730</ObjectId>
       <StateNumber>675</StateNumber>
     </table>
-    <column id="26" parent="24" name="id">
+    <column id="29" parent="25" name="username">
+      <Position>1</Position>
+      <DataType>varchar(100)|0s</DataType>
+      <NotNull>1</NotNull>
+      <StateNumber>696</StateNumber>
+      <TypeId>1043</TypeId>
+    </column>
+    <column id="30" parent="25" name="series">
+      <Position>2</Position>
+      <DataType>varchar(64)|0s</DataType>
+      <NotNull>1</NotNull>
+      <StateNumber>696</StateNumber>
+      <TypeId>1043</TypeId>
+    </column>
+    <column id="31" parent="25" name="token">
+      <Position>3</Position>
+      <DataType>varchar(64)|0s</DataType>
+      <NotNull>1</NotNull>
+      <StateNumber>696</StateNumber>
+      <TypeId>1043</TypeId>
+    </column>
+    <column id="32" parent="25" name="last_used">
+      <Position>4</Position>
+      <DataType>timestamp|0s</DataType>
+      <NotNull>1</NotNull>
+      <StateNumber>696</StateNumber>
+      <TypeId>1114</TypeId>
+    </column>
+    <index id="33" parent="25" name="persistent_logins_pkey">
+      <ObjectId>24749</ObjectId>
+      <ColNames>series</ColNames>
+      <Unique>1</Unique>
+    </index>
+    <key id="34" parent="25" name="persistent_logins_pkey">
+      <ObjectId>24750</ObjectId>
+      <ColNames>series</ColNames>
+      <UnderlyingIndexName>persistent_logins_pkey</UnderlyingIndexName>
+      <Primary>1</Primary>
+    </key>
+    <column id="35" parent="26" name="id">
       <Position>1</Position>
       <DataType>bigint|0s</DataType>
       <NotNull>1</NotNull>
@@ -150,52 +205,120 @@
       <TypeId>20</TypeId>
       <SequenceName>service_user_id_seq</SequenceName>
     </column>
-    <column id="27" parent="24" name="age">
+    <column id="36" parent="26" name="age">
       <Position>2</Position>
       <DataType>integer|0s</DataType>
       <StateNumber>657</StateNumber>
       <TypeId>23</TypeId>
     </column>
-    <column id="28" parent="24" name="hash_password">
+    <column id="37" parent="26" name="hash_password">
       <Position>3</Position>
       <DataType>varchar(255)|0s</DataType>
       <StateNumber>657</StateNumber>
       <TypeId>1043</TypeId>
     </column>
-    <column id="29" parent="24" name="login">
+    <column id="38" parent="26" name="login">
       <Position>4</Position>
       <DataType>varchar(255)|0s</DataType>
       <StateNumber>657</StateNumber>
       <TypeId>1043</TypeId>
     </column>
-    <column id="30" parent="24" name="name">
+    <column id="39" parent="26" name="name">
       <Position>5</Position>
       <DataType>varchar(255)|0s</DataType>
       <StateNumber>657</StateNumber>
       <TypeId>1043</TypeId>
     </column>
-    <index id="31" parent="24" name="service_user_pkey">
+    <column id="40" parent="26" name="followers">
+      <Position>7</Position>
+      <DataType>integer|0s</DataType>
+      <StateNumber>734</StateNumber>
+      <DefaultExpression>0</DefaultExpression>
+      <TypeId>23</TypeId>
+    </column>
+    <column id="41" parent="26" name="avatar_id">
+      <Position>9</Position>
+      <DataType>bigint|0s</DataType>
+      <StateNumber>741</StateNumber>
+      <TypeId>20</TypeId>
+    </column>
+    <index id="42" parent="26" name="service_user_pkey">
       <ObjectId>24726</ObjectId>
       <ColNames>id</ColNames>
       <Unique>1</Unique>
     </index>
-    <index id="32" parent="24" name="uk_ml01vi63x4qf3wgfuohlk6ej0">
+    <index id="43" parent="26" name="uk_ml01vi63x4qf3wgfuohlk6ej0">
       <ObjectId>24736</ObjectId>
       <ColNames>login</ColNames>
       <Unique>1</Unique>
     </index>
-    <key id="33" parent="24" name="service_user_pkey">
+    <key id="44" parent="26" name="service_user_pkey">
       <ObjectId>24727</ObjectId>
       <ColNames>id</ColNames>
       <UnderlyingIndexName>service_user_pkey</UnderlyingIndexName>
       <Primary>1</Primary>
     </key>
-    <key id="34" parent="24" name="uk_ml01vi63x4qf3wgfuohlk6ej0">
+    <key id="45" parent="26" name="uk_ml01vi63x4qf3wgfuohlk6ej0">
       <ObjectId>24737</ObjectId>
       <ColNames>login</ColNames>
       <UnderlyingIndexName>uk_ml01vi63x4qf3wgfuohlk6ej0</UnderlyingIndexName>
     </key>
-    <column id="35" parent="25" name="id">
+    <column id="46" parent="27" name="id">
+      <Position>1</Position>
+      <DataType>bigint|0s</DataType>
+      <NotNull>1</NotNull>
+      <StateNumber>742</StateNumber>
+      <DefaultExpression>nextval(&apos;users_avatars_id_seq&apos;::regclass)</DefaultExpression>
+      <TypeId>20</TypeId>
+      <SequenceName>users_avatars_id_seq</SequenceName>
+    </column>
+    <column id="47" parent="27" name="file_name">
+      <Position>2</Position>
+      <DataType>varchar(255)|0s</DataType>
+      <StateNumber>742</StateNumber>
+      <TypeId>1043</TypeId>
+    </column>
+    <column id="48" parent="27" name="path">
+      <Position>3</Position>
+      <DataType>varchar(255)|0s</DataType>
+      <StateNumber>749</StateNumber>
+      <TypeId>1043</TypeId>
+    </column>
+    <column id="49" parent="27" name="url">
+      <Position>4</Position>
+      <DataType>varchar(255)|0s</DataType>
+      <StateNumber>742</StateNumber>
+      <TypeId>1043</TypeId>
+    </column>
+    <column id="50" parent="27" name="user_id">
+      <Position>5</Position>
+      <DataType>bigint|0s</DataType>
+      <StateNumber>742</StateNumber>
+      <TypeId>20</TypeId>
+    </column>
+    <column id="51" parent="27" name="storage_file_name">
+      <Position>6</Position>
+      <DataType>varchar(255)|0s</DataType>
+      <StateNumber>750</StateNumber>
+      <TypeId>1043</TypeId>
+    </column>
+    <index id="52" parent="27" name="users_avatars_pkey">
+      <ObjectId>24769</ObjectId>
+      <ColNames>id</ColNames>
+      <Unique>1</Unique>
+    </index>
+    <index id="53" parent="27" name="users_avatars_user_id_uindex">
+      <ObjectId>24771</ObjectId>
+      <ColNames>user_id</ColNames>
+      <Unique>1</Unique>
+    </index>
+    <key id="54" parent="27" name="users_avatars_pkey">
+      <ObjectId>24770</ObjectId>
+      <ColNames>id</ColNames>
+      <UnderlyingIndexName>users_avatars_pkey</UnderlyingIndexName>
+      <Primary>1</Primary>
+    </key>
+    <column id="55" parent="28" name="id">
       <Position>1</Position>
       <DataType>bigint|0s</DataType>
       <NotNull>1</NotNull>
@@ -204,42 +327,36 @@
       <TypeId>20</TypeId>
       <SequenceName>users_posts_id_seq</SequenceName>
     </column>
-    <column id="36" parent="25" name="post">
+    <column id="56" parent="28" name="post">
       <Position>2</Position>
       <DataType>varchar(255)|0s</DataType>
       <StateNumber>658</StateNumber>
       <TypeId>1043</TypeId>
     </column>
-    <column id="37" parent="25" name="user_id">
+    <column id="57" parent="28" name="user_id">
       <Position>3</Position>
       <DataType>bigint|0s</DataType>
       <StateNumber>658</StateNumber>
       <TypeId>20</TypeId>
     </column>
-    <column id="38" parent="25" name="headline">
-      <Position>4</Position>
-      <DataType>varchar(255)|0s</DataType>
-      <StateNumber>671</StateNumber>
-      <TypeId>1043</TypeId>
-    </column>
-    <column id="39" parent="25" name="user_name">
+    <column id="58" parent="28" name="user_name">
       <Position>5</Position>
       <DataType>varchar|0s</DataType>
       <StateNumber>675</StateNumber>
       <TypeId>1043</TypeId>
     </column>
-    <index id="40" parent="25" name="users_posts_pkey">
+    <index id="59" parent="28" name="users_posts_pkey">
       <ObjectId>24734</ObjectId>
       <ColNames>id</ColNames>
       <Unique>1</Unique>
     </index>
-    <key id="41" parent="25" name="users_posts_pkey">
+    <key id="60" parent="28" name="users_posts_pkey">
       <ObjectId>24735</ObjectId>
       <ColNames>id</ColNames>
       <UnderlyingIndexName>users_posts_pkey</UnderlyingIndexName>
       <Primary>1</Primary>
     </key>
-    <foreign-key id="42" parent="25" name="fkfsnunxco8d0hrkbac7orc46fv">
+    <foreign-key id="61" parent="28" name="fkfsnunxco8d0hrkbac7orc46fv">
       <ObjectId>24738</ObjectId>
       <ColNames>user_id</ColNames>
       <RefTableId>24719</RefTableId>

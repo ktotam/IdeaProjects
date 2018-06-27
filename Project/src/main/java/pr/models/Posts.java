@@ -20,7 +20,6 @@ public class Posts {
     private Long id;
 
     private String post;
-    private String headline;
 
     @Column(name = "user_name")
     private String userName;

@@ -14,7 +14,6 @@ import pr.models.User;
 public class PostsDto {
     private Long userId;
     private String post;
-    private String headline;
     private String userName;
     private Long id;
 
@@ -22,7 +21,6 @@ public class PostsDto {
         return PostsDto.builder()
                 .id(model.getId())
                 .userName(model.getUserName())
-                .headline(model.getHeadline())
                 .post(model.getPost())
                 .userId(model.getUserId())
                 .build();

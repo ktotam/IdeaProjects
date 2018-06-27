@@ -8,7 +8,7 @@
 
     <style type="text/css">
         body {
-            background-image: url(http://www.joburgchiropractor.co.za/images/background.jpg);
+            background-color: #E9F2F7;
         }
     </style>
 </head>
@@ -24,7 +24,7 @@
                 <div class="tab-content">
                     <div id="home" class="tab-pane fade in active">
 
-                        <form action="/user" method="post">
+                        <form>
 
                             <div class="form-group">
                                 <label for="UserName">Login</label>
@@ -46,7 +46,7 @@
                                 <input type="text" class="form-control" name="age">
                             </div>
 
-                            <button type="submit" class="btn btn-default btn-lg">Sign Up</button>
+                            <button formaction="user" formmethod="post" type="submit" class="btn btn-lg btn-success">Sign Up</button>
 
 
                         </form>

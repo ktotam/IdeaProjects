@@ -10,10 +10,18 @@ public class UserDetailsImpl implements UserDetails {
 
     private String login;
     private String hashPassword;
+    private Long id;
+    private Integer age;
+    private String name;
+    private int followers;
 
     public UserDetailsImpl (User user) {
         this.login = user.getLogin();
         this.hashPassword = user.getHashPassword();
+        this.id = user.getId();
+        this.age = user.getAge();
+        this.followers = user.getFollowers();
+        this.name = user.getName();
     }
     @Override
     public Collection<? extends GrantedAuthority> getAuthorities() {
@@ -48,5 +56,18 @@ public class UserDetailsImpl implements UserDetails {
     @Override
     public boolean isEnabled() {
         return true;
+    }
+
+
+    public Long getId() {
+        return this.id;
+    }
+
+    public String getLogin() {
+        return this.login;
+    }
+
+    public String getName() {
+        return this.name;
     }
 }

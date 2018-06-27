@@ -42,8 +42,7 @@
 <div class="container" style="margin-left: 8%; margin-right: 80%;">
     <div class="col-md-12">
         <#list posts as post>
-        <h1>${post.headline}</h1>
-        <p>${post.post}</p>
+        <h1>${post.post}</h1>
         <div>
             <span class="badge">Posted 2012-08-02 20:47:04</span><div class="pull-right"><span class="label label-primary">${post.userName}</span>
         </div>
