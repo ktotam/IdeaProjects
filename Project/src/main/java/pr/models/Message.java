@@ -1,0 +1,43 @@
+package pr.models;
+
+import lombok.AllArgsConstructor;
+import lombok.Builder;
+import lombok.Data;
+import lombok.NoArgsConstructor;
+
+import javax.persistence.*;
+
+@Data
+@NoArgsConstructor
+@AllArgsConstructor
+@Builder
+@Entity
+@Table(name = "user_messages")
+public class Message {
+
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    private Long id;
+
+    @ManyToOne
+    @JoinColumn(name = "from_id")
+    private User user;
+
+    private Long toId;
+
+    private String text;
+
+    @Column(name = "from_user")
+    private String fromUserName;
+
+    @Column(name = "to_user")
+    private String toUserName;
+
+    public Long getFromId() {
+        return user.getId();
+    }
+
+    public String getUserName() {
+        return user.getName();
+    }
+}

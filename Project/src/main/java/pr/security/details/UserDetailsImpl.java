@@ -20,7 +20,7 @@ public class UserDetailsImpl implements UserDetails {
         this.hashPassword = user.getHashPassword();
         this.id = user.getId();
         this.age = user.getAge();
-        this.followers = user.getFollowers();
+        this.followers = user.getLikes();
         this.name = user.getName();
     }
     @Override

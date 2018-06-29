@@ -15,13 +15,15 @@ import javax.persistence.*;
 @Entity
 @Table(name = "users_avatars")
 public class Avatar {
+
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
     private Long userId;
 
-
+    private String type;
     private String fileName;
     private String path;
+    private String url;
 }

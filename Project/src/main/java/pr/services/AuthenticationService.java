@@ -1,10 +1,10 @@
 package pr.services;
 
 import org.springframework.security.core.Authentication;
+import pr.dto.MessageDto;
 import pr.dto.PostsDto;
 import pr.dto.UserDto;
 import pr.models.Avatar;
-import pr.models.User;
 
 import java.util.List;
 
@@ -19,5 +19,9 @@ public interface AuthenticationService {
 
     UserDto getUserByAuthentication(Authentication authentication);
 
-    String getAvatarByAutentication(Authentication authentication);
+    Avatar getAvatarByAuthentication(Authentication authentication);
+
+    List<MessageDto> getInboxMessagesByAuthentication(Authentication authentication);
+
+    List<MessageDto> getSentMessagesByAuthentication(Authentication authentication);
 }

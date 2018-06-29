@@ -6,7 +6,7 @@ import lombok.Data;
 import lombok.NoArgsConstructor;
 
 import javax.persistence.*;
-import java.util.ArrayList;
+import javax.validation.constraints.NotNull;
 import java.util.List;
 
 @Data
@@ -21,12 +21,19 @@ public class User {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
+
+
     private String name;
     private Integer age;
-    private int followers;
 
-    
-    private Long avatarId;
+    @Column(nullable = true)
+    private int likes;
+
+    @Column(name = "posts_count")
+    private int postsCount;
+
+    @Column(name = "avatar_url")
+    private String avatarUrl;
 
     @Column(unique = true)
     private String login;
@@ -36,6 +43,9 @@ public class User {
 
     @OneToMany(mappedBy = "user")
     private List<Posts> posts;
+
+    @OneToMany(mappedBy = "user")
+    private List<Message> messages;
 
 }
 

@@ -28,12 +28,12 @@
 
                         <div class="form-group">
                             <label for="UserName">Login</label>
-                            <input type="text" class="form-control" name="login">
+                            <input type="text" class="form-control" name="login" maxlength="255">
                         </div>
 
                         <div class="form-group">
                             <label for="password">Password</label>
-                            <input type="password" class="form-control" name="password">
+                            <input type="password" class="form-control" name="password" maxlength="255">
                         </div>
 
                         <button type="submit" formaction="signIn" formmethod="post" class="btn btn-lg btn-success">Sign In</button>

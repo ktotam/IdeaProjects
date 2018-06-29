@@ -5,7 +5,6 @@ import lombok.Builder;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 import pr.models.Posts;
-import pr.models.User;
 
 @Data
 @AllArgsConstructor
@@ -16,12 +15,14 @@ public class PostsDto {
     private String post;
     private String userName;
     private Long id;
+    private int likes;
 
     public static PostsDto from(Posts model) {
         return PostsDto.builder()
                 .id(model.getId())
                 .userName(model.getUserName())
                 .post(model.getPost())
+                .likes(model.getLikes())
                 .userId(model.getUserId())
                 .build();
     }

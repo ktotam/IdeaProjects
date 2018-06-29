@@ -15,7 +15,9 @@ public class UserDto {
     private String login;
     private String name;
     private Integer age;
-    private int followers;
+    private int likes;
+    private int postsCount;
+    private String avatarUrl;
 
     public static UserDto from(User model) {
         return UserDto.builder()
@@ -23,7 +25,9 @@ public class UserDto {
                 .name(model.getName())
                 .age(model.getAge())
                 .login(model.getLogin())
-                .followers(model.getFollowers())
+                .likes(model.getLikes())
+                .postsCount(model.getPostsCount())
+                .avatarUrl(model.getAvatarUrl())
                 .build();
     }
 }

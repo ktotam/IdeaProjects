@@ -19,6 +19,8 @@ public class Posts {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
+    private int likes;
+
     private String post;
 
     @Column(name = "user_name")
@@ -30,6 +32,10 @@ public class Posts {
 
     public Long getUserId() {
         return user.getId();
+    }
+
+    public String getUserName() {
+        return user.getName();
     }
 
 }

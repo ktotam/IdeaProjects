@@ -28,22 +28,22 @@
 
                             <div class="form-group">
                                 <label for="UserName">Login</label>
-                                <input type="text" class="form-control" name="login">
+                                <input type="text" class="form-control" name="login" maxlength="255">
                             </div>
 
                             <div class="form-group">
                                 <label for="password">Password</label>
-                                <input type="password" class="form-control" name="password">
+                                <input type="password" class="form-control" name="password" maxlength="255">
                             </div>
 
                             <div class="form-group">
                                 <label for="Name">Name</label>
-                                <input type="text" class="form-control" name="name">
+                                <input type="text" class="form-control" name="name" maxlength="255">
                             </div>
 
                             <div class="form-group">
                                 <label for="Age">Age</label>
-                                <input type="text" class="form-control" name="age">
+                                <input type="text" class="form-control" name="age" maxlength="3">
                             </div>
 
                             <button formaction="user" formmethod="post" type="submit" class="btn btn-lg btn-success">Sign Up</button>

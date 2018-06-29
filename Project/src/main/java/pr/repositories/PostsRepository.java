@@ -19,4 +19,12 @@ public interface PostsRepository extends JpaRepository<Posts, Long> {
     @Transactional
     @Query(nativeQuery = true, value = "INSERT INTO users_posts(post, user_id, user_name) VALUES (?1,?2,?3)")
     void newPost(String text, Long userId, String userName);
+
+    @Modifying
+    @Transactional
+    @Query(nativeQuery = true, value = "UPDATE users_posts SET likes = likes + 1 WHERE id = ?1")
+    void likePost(Long postId);
+
+    @Query(nativeQuery = true, value = "SELECT * FROM users_posts ORDER BY likes DESC limit 3")
+    List<Posts> findPopularPosts();
 }

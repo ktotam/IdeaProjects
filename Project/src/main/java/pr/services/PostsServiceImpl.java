@@ -1,12 +1,10 @@
 package pr.services;
 
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.security.core.Authentication;
 import org.springframework.stereotype.Component;
 import pr.dto.PostsDto;
 import pr.models.Posts;
 import pr.repositories.PostsRepository;
-import pr.security.details.UserDetailsImpl;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -26,6 +24,7 @@ public class PostsServiceImpl implements PostsService {
             postsDtos.add(PostsDto.builder()
                     .userName(tempPost.getUserName())
                     .post(tempPost.getPost())
+                    .likes(tempPost.getLikes())
                     .userId(tempPost.getUserId())
                     .build());
         }
@@ -41,6 +40,8 @@ public class PostsServiceImpl implements PostsService {
             postsDtos.add(PostsDto.builder()
                     .id(tempPost.getId())
                     .post(tempPost.getPost())
+                    .likes(tempPost.getLikes())
+                    .userName(tempPost.getUserName())
                     .userId(tempPost.getUserId())
                     .build());
         }
@@ -51,5 +52,29 @@ public class PostsServiceImpl implements PostsService {
     public void newPost(String post, Long userId, String userName) {
         postsRepository.newPost(post, userId, userName);
                 
+    }
+
+    @Override
+    public void likePost(Long postId) {
+        postsRepository.likePost(postId);
+    }
+
+    @Override
+    public List<PostsDto> getPopularPosts() {
+        List<Posts> posts = postsRepository.findPopularPosts();
+
+        List<PostsDto> postsDtos = new ArrayList<>();
+        for (Posts tempPost : posts) {
+            if (tempPost.getPost().length() > 25) {
+                tempPost.setPost(tempPost.getPost().substring(0,25) + "...");
+            }
+            postsDtos.add(PostsDto.builder()
+                    .id(tempPost.getId())
+                    .post(tempPost.getPost())
+                    .likes(tempPost.getLikes())
+                    .userId(tempPost.getUserId())
+                    .build());
+        }
+        return postsDtos;
     }
 }
