@@ -2,7 +2,7 @@
 <html xmlns="http://www.w3.org/1999/html">
 <head>
     <meta charset="UTF-8">
-    <title>Posts</title>
+    <title>All Users</title>
     <link href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" type="text/css" href="css/style.css"/>
 
@@ -51,7 +51,7 @@
                 <div class="panel-body">
                 <#list users as user>
                     <div class="well well-sm">
-                    <div class="media">
+                        <div class="media">
                         <div class="media-body">
 
 
@@ -68,13 +68,10 @@
                             <span class="label label-primary">${user.postsCount} Posts</span>
                             <span class="label label-primary">${user.likes} Likes</span>
                         </div>
-
+                        </div>
                     </div>
-
-
-                </div>
-                                             <hr>
-                                         </#list>
+                    <hr>
+                </#list>
                 </div>
             </div>
         </div>
