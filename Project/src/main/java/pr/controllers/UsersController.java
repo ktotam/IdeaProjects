@@ -1,20 +1,21 @@
 package pr.controllers;
 
+import org.json.simple.JSONObject;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
-import org.springframework.http.MediaType;
-import org.springframework.http.ResponseEntity;
 import org.springframework.security.core.Authentication;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.ModelMap;
 import org.springframework.web.bind.annotation.*;
 import org.springframework.web.multipart.MultipartFile;
+import pr.dto.MessageDto;
 import pr.dto.PostsDto;
 import pr.dto.UserDto;
 import pr.forms.*;
-import pr.models.Avatar;
+import pr.models.Message;
 import pr.models.User;
 import pr.services.*;
+import org.json.simple.JSONObject;
 
 import javax.servlet.http.HttpServletResponse;
 import java.io.File;
@@ -46,29 +47,67 @@ public class UsersController {
     @Autowired
     private AvatarService avatarService;
 
+
+    @GetMapping("/signUp")
+    public String signUpPage() {
+        return "SignUp";
+    }
+
+    @GetMapping("/signIn")
+    public String signInPage() {
+        return "SignIn";
+    }
+
+    @GetMapping("/")
+    public String defaultPage() {
+        return "redirect:/user";
+    }
+
     @GetMapping("/allusers")
-    public String getUsersPage(ModelMap users, ModelMap avatars) {
+    public String getUsersPage(ModelMap users) {
         List<UserDto> allUsers = usersService.getAllUsers();
         users.addAttribute("users", allUsers);
 
         return "UsersPage";
     }
 
-    @GetMapping("/users/{user-id}")
-    public String getPage(Authentication authentication, ModelMap posts, ModelMap user, ModelMap avatar, @PathVariable("user-id") Long userId) {
+    @GetMapping("/user")
+    public String userPage(Authentication authentication,
+                           ModelMap posts, ModelMap user, ModelMap popularPosts, ModelMap popularUsers, ModelMap usersPostsLikes){
+        if (authentication == null) {
+            return "redirect:/signIn";
+        }
+        else {
+            usersPostsLikes.addAttribute("likedPosts", postsService.getUsersPostsLikes(authenticationService.getUserIdByAuthentication(authentication)));
+            posts.addAttribute("posts", authenticationService.getUserPostsByAuthentication(authentication));
+            popularPosts.addAttribute("popularPosts", postsService.getPopularPosts());
+            popularUsers.addAttribute("popularUsers", usersService.getPopularUsers());
+            user.addAttribute("user", authenticationService.getUserByAuthentication(authentication));
+            return "UserPage";
+        }
+    }
 
-        if(userId == authenticationService.getUserIdByAuthentication(authentication)) {
+    @GetMapping("/users/{user-id}")
+    public String getPage(Authentication authentication, @PathVariable("user-id") Long userId,
+                          ModelMap isFollowed, ModelMap posts, ModelMap user, ModelMap selfId, ModelMap usersPostsLikes) {
+
+        if(userId.equals(authenticationService.getUserIdByAuthentication(authentication))) {
             return "redirect:/user";
         }
+
+        selfId.addAttribute("selfId", authenticationService.getUserIdByAuthentication(authentication));
+
+        List<Long> likes = postsService.getUsersPostsLikes(authenticationService.getUserIdByAuthentication(authentication));
+        usersPostsLikes.addAttribute("likedPosts", likes);
 
         List<PostsDto> tempPosts = postsService.getPostsByUserId(userId);
         posts.addAttribute("posts", tempPosts);
 
-        Avatar tempAvatar = avatarService.getAvatarByUserId(userId);
-        avatar.addAttribute("avatar", tempAvatar);
-
         User tempUser = usersService.getOneById(userId);
         user.addAttribute("user", tempUser);
+
+        Boolean follow = usersService.checkFollow((authenticationService.getUserIdByAuthentication(authentication)), userId);
+        isFollowed.addAttribute("isFollowed", follow);
         
         return "PostsPage";
     }
@@ -80,34 +119,57 @@ public class UsersController {
     }
 
     @GetMapping("/search")
-    public String search(ModelMap model, SearchForm text) {
-        List<PostsDto> posts = postsService.searchPosts(text.getText());
-        model.addAttribute("posts", posts);
+    public String search(ModelMap user, ModelMap posts, ModelMap usersPostsLikes, ModelMap popularPosts, ModelMap popularUsers, ModelMap searchText,
+                         SearchForm text, Authentication authentication) {
+        user.addAttribute("user", authenticationService.getUserByAuthentication(authentication));
+        usersPostsLikes.addAttribute("likedPosts", postsService.getUsersPostsLikes(authenticationService.getUserIdByAuthentication(authentication)));
+        searchText.addAttribute("text", text.getText());
+        posts.addAttribute("posts", postsService.searchPosts(text.getText()));
+        popularPosts.addAttribute("popularPosts", postsService.getPopularPosts());
+        popularUsers.addAttribute("popularUsers", usersService.getPopularUsers());
         return "SearchPage";
+    }
+
+    @GetMapping("/feed")
+    public String feedPage(ModelMap user, ModelMap posts, ModelMap usersPostsLikes, ModelMap popularPosts, ModelMap popularUsers,
+                           Authentication authentication) {
+
+        user.addAttribute("user", authenticationService.getUserByAuthentication(authentication));
+        usersPostsLikes.addAttribute("likedPosts", postsService.getUsersPostsLikes(authenticationService.getUserIdByAuthentication(authentication)));
+        posts.addAttribute("posts", postsService.getFeedPosts(authenticationService.getUserIdByAuthentication(authentication)));
+        popularPosts.addAttribute("popularPosts", postsService.getPopularPosts());
+        popularUsers.addAttribute("popularUsers", usersService.getPopularUsers());
+        return "FeedPage";
     }
 
     @PostMapping("/newPost")
     public String newPost(Authentication authentication, PostForm post) {
         postsService.newPost(post.getText(),
-                authenticationService.getUserIdByAuthentication(authentication),
-                authenticationService.getNameByAuthentication(authentication));
+                authenticationService.getUserIdByAuthentication(authentication));
         usersService.addNewPost(authenticationService.getUserIdByAuthentication(authentication));
         return "redirect:/user";
     }
 
-    @GetMapping("/user")
-    public String userPage(Authentication authentication, ModelMap posts, ModelMap user, ModelMap avatar, ModelMap popularPosts, ModelMap popularUsers){
-        if (authentication == null) {
-            return "redirect:/signIn";
-        }
-        else {
-            posts.addAttribute("posts", authenticationService.getUserPostsByAuthentication(authentication));
-            popularPosts.addAttribute("popularPosts", postsService.getPopularPosts());
-            popularUsers.addAttribute("popularUsers", usersService.getPopularUsers());
-            user.addAttribute("user", authenticationService.getUserByAuthentication(authentication));
-            avatar.addAttribute("avatar",authenticationService.getAvatarByAuthentication(authentication));
-            return "UserPage";
-        }
+    @GetMapping("/edit")
+    public String editProfile() {
+        return "ProfileEdit";
+    }
+
+    @PostMapping("/edit")
+    public String profileEdit(UserForm user, Authentication authentication) {
+        usersService.updateUser(user, authenticationService.getUserIdByAuthentication(authentication));
+        return "redirect:/user";
+    }
+
+
+    @PostMapping("/like/{post-id}")
+    public void likePost(Authentication authentication, @PathVariable("post-id") Long postId) {
+        postsService.likePost(authenticationService.getUserIdByAuthentication(authentication), postId);
+    }
+
+    @GetMapping("/files/{file-name:.+}")
+    public void getFile(@PathVariable("file-name") String fileName, HttpServletResponse response) throws Exception {
+        avatarService.writeAvatarToResponse(fileName, response);
     }
 
     @PostMapping("/upload")
@@ -132,54 +194,26 @@ public class UsersController {
             avatarService.saveAvatar(login + "_avatar.png",
                     storagePath + login + "_avatar.png",
                     type,
-                    "http://localhost:8080/files/" + login + "_avatar.png",
+                    "http://localhost:8082/files/" + login + "_avatar.png",
                     authenticationService.getUserIdByAuthentication(authentication));
 
-            usersService.addAvatarUrl("http://localhost:8080/files/" + login + "_avatar.png",
+            usersService.addAvatarUrl("http://localhost:8082/files/" + login + "_avatar.png",
                     authenticationService.getUserIdByAuthentication(authentication));
         } catch (IOException e) {
-                e.printStackTrace();
+            e.printStackTrace();
         }
 
         return "redirect:/user";
     }
-
-    @GetMapping("/edit")
-    public String editProfile() {
-        return "ProfileEdit";
+/*
+    @PostMapping("/msg")
+    public String sendMessage(Authentication authentication, MessageForm messageForm) {
+        messageService.newMessage(messageForm, authenticationService.getUserIdByAuthentication(authentication), authenticationService.getNameByAuthentication(authentication));
+        return "redirect:/msg/";
     }
 
-    @PostMapping("/edit")
-    public String profileEdit(UserForm user, Authentication authentication) {
-        usersService.updateUser(user, authenticationService.getUserIdByAuthentication(authentication));
-        messageService.updateMessages(user.getName(), authenticationService.getUserIdByAuthentication(authentication));
-        return "redirect:/user";
-    }
-
-    @GetMapping("/signUp")
-    public String signUpPage() {
-        return "SignUp";
-    }
-
-    @GetMapping("/signIn")
-    public String signInPage() {
-        return "SignIn";
-    }
-
-    @GetMapping("/")
-    public String defaultPage() {
-        return "redirect:/user";
-    }
-
-    @PostMapping("/like/{post-id}&{user-id}")
-    public String likePost(@PathVariable("post-id") Long postId, @PathVariable("user-id") Long userId) {
-        usersService.likeUserPost(userId);
-        postsService.likePost(postId);
-        return "redirect:/users/{user-id}";
-    }
-
-    @GetMapping("/msg/")
-    public String messagesPage(Authentication authentication, ModelMap inboxMessages, ModelMap sentMessages, ModelMap user) {
+     @GetMapping("/msg/")
+    public String messagesPage(Authentication authentication, ModelMap inboxMessages, ModelMap sentMessages) {
         if (authentication == null) {
             return "redirect:/signIn";
         }
@@ -190,21 +224,46 @@ public class UsersController {
         }
     }
 
-    @GetMapping("/files/{file-name:.+}")
-    public void getFile(@PathVariable("file-name") String fileName, HttpServletResponse response) throws Exception {
-        avatarService.writeAvatarToResponse(fileName, response);
+*/
+    @PostMapping("/msg+{to-id}+{from-id}")
+    @ResponseBody
+    public String getMessages(@PathVariable("to-id") Long toId, @PathVariable("from-id") Long fromId) {
+        return messageService.getMessages(toId, fromId);
     }
 
-    @PostMapping("/msg")
-    public String sendMessage(Authentication authentication, MessageForm messageForm) {
-        messageService.newMessage(messageForm, authenticationService.getUserIdByAuthentication(authentication), authenticationService.getNameByAuthentication(authentication));
-        return "redirect:/msg/";
+    @GetMapping("/follow/{user-id}")
+    public void followUser(Authentication authentication, @PathVariable("user-id") Long toId) {
+        usersService.followUser(authenticationService.getUserIdByAuthentication(authentication), toId);
     }
 
-    @PostMapping("/msgto/{user-id}")
-    public String sendMessageTo(@PathVariable("user-id") Long userId, Authentication authentication, MessageForm messageForm) {
-        messageForm.setToId(userId);
-        messageService.newMessage(messageForm, authenticationService.getUserIdByAuthentication(authentication), authenticationService.getNameByAuthentication(authentication));
-        return "redirect:/users/{user-id}";
+    @GetMapping("/unfollow/{user-id}")
+    public void unfollowUser(Authentication authentication, @PathVariable("user-id") Long toId) {
+        usersService.unfollowUser(authenticationService.getUserIdByAuthentication(authentication), toId);
+    }
+
+    @PostMapping("/repost/{post-id}")
+    public void repost(Authentication authentication, @PathVariable("post-id") Long postId) {
+        postsService.repost(authenticationService.getUserIdByAuthentication(authentication), postId);
+    }
+
+    @GetMapping("/chat")
+    public String chat(Authentication authentication, ModelMap chatList, ModelMap user) {
+        if (authentication == null) {
+            return "redirect:/signIn";
+        }
+        user.addAttribute("user", authenticationService.getUserByAuthentication(authentication));
+        chatList.addAttribute("chatListUsers", authenticationService.getChatListByAuthentication(authentication));
+        return "Chatnew";
+    }
+
+    @PostMapping("/chat/{user-id}")
+    public String createChat(Authentication authentication, @PathVariable("user-id") Long user2) {
+        usersService.createChat(authenticationService.getUserIdByAuthentication(authentication), user2);
+        return "redirect:/chat";
+    }
+    @GetMapping("/chatold")
+    public String chatold(Authentication authentication, ModelMap chatList, ModelMap user) {
+        user.addAttribute("user", authenticationService.getUserByAuthentication(authentication));
+        return "Chatold";
     }
 }

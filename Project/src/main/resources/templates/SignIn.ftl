@@ -26,7 +26,6 @@
                 <div id="home" class="tab-pane fade in active">
 
                     <form>
-
                         <div class="form-group">
                             <label for="UserName">Login</label>
                             <input type="text" class="form-control" name="login" maxlength="255">
@@ -35,6 +34,11 @@
                         <div class="form-group">
                             <label for="password">Password</label>
                             <input type="password" class="form-control" name="password" maxlength="255">
+                        </div>
+
+                        <div class="form-group">
+                            <label for="remember-me">
+                                <input type="checkbox" id="remember-me" name="remember-me"> Remember</label>
                         </div>
 
                         <button type="submit" formaction="signIn" formmethod="post" class="btn btn-lg btn-success">Sign In</button>

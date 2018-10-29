@@ -1,15 +1,21 @@
 package pr.services;
 
+import org.apache.commons.io.IOUtils;
 import org.springframework.security.crypto.password.PasswordEncoder;
 import pr.dto.UserDto;
 import pr.forms.UserForm;
+import pr.models.Avatar;
 import pr.models.User;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 import pr.repositories.UsersRepository;
 
+import java.io.File;
+import java.io.FileInputStream;
+import java.io.InputStream;
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Optional;
 
 @Component
 public class UsersServiceImpl implements UsersService {
@@ -28,11 +34,11 @@ public class UsersServiceImpl implements UsersService {
             userDtos.add(UserDto.builder()
                     .id(user.getId())
                     .name(user.getName())
-                    .likes(user.getLikes())
                     .postsCount(user.getPostsCount())
                     .login(user.getLogin())
                     .avatarUrl(user.getAvatarUrl())
                     .age(user.getAge())
+                    .followersCount(user.getFollowersCount())
                     .build());
         }
         return userDtos;
@@ -45,9 +51,10 @@ public class UsersServiceImpl implements UsersService {
                 .name(user.getName())
                 .age((user.getAge()))
                 .hashPassword(hashPassword)
-                .avatarUrl("http://localhost:8080/files/default.png")
+                .avatarUrl("images/default.png")
                 .build();
         usersRepository.save(newUser);
+
     }
 
     @Override
@@ -57,12 +64,7 @@ public class UsersServiceImpl implements UsersService {
 
     @Override
     public User getOneById(Long userId) {
-        return usersRepository.findById(userId);
-    }
-
-    @Override
-    public void likeUserPost(Long userId) {
-        usersRepository.likeUserPost(userId);
+        return usersRepository.findById(userId).orElse(null);
     }
 
     @Override
@@ -73,9 +75,11 @@ public class UsersServiceImpl implements UsersService {
         for (User user : users) {
             userDtos.add(UserDto.builder()
                     .id(user.getId())
-                    .login(user.getLogin())
-                    .likes(user.getLikes())
                     .name(user.getName())
+                    .postsCount(user.getPostsCount())
+                    .login(user.getLogin())
+                    .avatarUrl(user.getAvatarUrl())
+                    .age(user.getAge())
                     .build());
         }
         return userDtos;
@@ -89,5 +93,32 @@ public class UsersServiceImpl implements UsersService {
     @Override
     public void addAvatarUrl(String url, Long userId) {
         usersRepository.addAvatarUrl(url, userId);
+    }
+
+    @Override
+    public void followUser(Long fromId, Long toId) {
+        if (!checkFollow(fromId, toId)) {
+            usersRepository.followUser(fromId, toId);
+            usersRepository.addFollower(toId);
+        }
+    }
+
+    @Override
+    public void unfollowUser(Long fromId, Long toId) {
+        if (checkFollow(fromId, toId)) {
+            usersRepository.unfollowUser(fromId, toId);
+            usersRepository.deleteFollower(toId);
+        }
+    }
+
+    @Override
+    public boolean checkFollow(Long fromId, Long toId) {
+        return usersRepository.checkFollow(fromId, toId);
+    }
+
+    @Override
+    public void createChat(Long user1, Long user2) {
+        if (!usersRepository.checkChat(user1,user2))
+            usersRepository.newChat(user1,user2);
     }
 }

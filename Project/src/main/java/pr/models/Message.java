@@ -27,17 +27,12 @@ public class Message {
 
     private String text;
 
-    @Column(name = "from_user")
-    private String fromUserName;
-
-    @Column(name = "to_user")
-    private String toUserName;
-
     public Long getFromId() {
         return user.getId();
     }
 
-    public String getUserName() {
-        return user.getName();
+    public String getAvatarUrl() {
+        return user.getAvatarUrl();
     }
+
 }

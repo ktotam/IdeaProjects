@@ -24,19 +24,20 @@
 <nav class="navbar navbar-default">
     <div class="container-fluid">
         <div class="navbar-header">
-            <a class="navbar-brand" href="/user">Home</a>
+            <ul class="nav navbar-nav">
+                <li><a href="/user"><big>Home</big></a></li>
+                <li><a href="/msg/"><big>Messages</big></a></li>
+                <li><a href="/feed"><big>Feed</big></a></li>
+            </ul>
         </div>
         <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-            <ul class="nav navbar-nav">
-                <li><a href="/msg/">Messages</a></li>
-            </ul>
             <ul class="nav navbar-nav navbar-right">
-                <li><a href="/logout">Logout</a></li>
+                <li><a href="/logout"><big>Logout</big></a></li>
             </ul>
             <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
                 <form class="navbar-form navbar-right">
                     <div class="form-group">
-                        <input type="text" class="form-control" placeholder="Search posts" name="text">
+                        <input type="text" class="form-control" placeholder="Search posts" name="text" autocomplete="off">
                     </div>
                     <button type="submit" formaction="/search" formmethod="get" class="btn btn-default">Search</button>
                 </form>
@@ -53,15 +54,14 @@
                 <div class="panel-body">
                     <div class="media">
                         <div class="media-body">
-                            <form method="post" action="/upload"
-                                  modelAttribute="uploadForm" enctype="multipart/form-data">
+                            <form method="post" action="/upload" enctype="multipart/form-data">
                                 <div>
                                     <label for="file"></label>
                                     <input type="file" id="file" name="file">
                                 </div>
                                 <br>
                                 <div>
-                                    <button  class="btn btn-default">Submit</button>
+                                    <input type="submit" class="btn btn-default" value="Submit">
                                 </div>
 
                         </div>
@@ -79,18 +79,17 @@
                 <div class="panel-body">
                     <div class="media">
                         <div class="media-body">
-                            <form>
                                 <div class="form-group">
                                     <label for="Name">Name</label>
-                                    <input type="text" class="form-control" name="name" maxlength="255">
+                                    <input type="text" class="form-control" name="name" maxlength="255" autocomplete="off">
                                 </div>
 
                                 <div class="form-group">
                                     <label for="Age">Age</label>
-                                    <input type="text" class="form-control" name="age" maxlength="3">
+                                    <input type="text" class="form-control" name="age" maxlength="3" autocomplete="off">
                                 </div>
                                 <div>
-                                    <button type="submit" formaction="/edit" formmethod="post" class="btn btn-default">Submit</button>
+                                    <input type="submit" formaction="/edit" formmethod="post" class="btn btn-default" value="Submit">
                                 </div>
 
                         </div>

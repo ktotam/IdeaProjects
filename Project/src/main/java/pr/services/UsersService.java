@@ -14,12 +14,19 @@ public interface UsersService {
     void updateUser(UserForm user, Long userId);
 
     User getOneById(Long userId);
-
-    void likeUserPost(Long userId);
-
+    
     List<UserDto> getPopularUsers();
 
     void addNewPost(Long userId);
 
     void addAvatarUrl(String url, Long userId);
+
+    void followUser(Long fromId, Long toId);
+
+    void unfollowUser(Long fromId, Long toId);
+
+    boolean checkFollow(Long fromId, Long toId);
+
+    void createChat(Long user1, Long user2);
+
 }

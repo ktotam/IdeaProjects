@@ -1,10 +1,14 @@
 package pr.services;
 
-import pr.forms.MessageForm;
+import pr.dto.MessageDto;
+import pr.models.Message;
+import org.json.simple.JSONObject;
+
+import java.util.List;
 
 public interface MessageService {
 
-    void newMessage(MessageForm messageForm, Long fromId, String fromUserName);
+    void newMessage(String text, Long toId, Long fromId);
 
-    void updateMessages(String newUserName, Long userId);
+    String getMessages(Long toId, Long fromId);
 }

@@ -21,7 +21,5 @@ public interface AuthenticationService {
 
     Avatar getAvatarByAuthentication(Authentication authentication);
 
-    List<MessageDto> getInboxMessagesByAuthentication(Authentication authentication);
-
-    List<MessageDto> getSentMessagesByAuthentication(Authentication authentication);
+    List getChatListByAuthentication(Authentication authentication);
 }

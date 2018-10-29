@@ -1,18 +1,134 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="ea230109-0e54-4961-99bd-1a5eb927b367" name="Default" comment="" />
-    <ignored path="$PROJECT_DIR$/out/" />
+    <list default="true" id="79140664-5e05-40c0-bb12-4b66f91a7ec2" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/../untitled/untitled.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/copyright/profiles_settings.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources.local.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources.local.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources/f93b4457-f8bc-431e-8167-71f7b2fbf9cd.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources/f93b4457-f8bc-431e-8167-71f7b2fbf9cd/storage_v2/_src_/database/postgres.edMnLQ.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources/f93b4457-f8bc-431e-8167-71f7b2fbf9cd/storage_v2/_src_/database/postgres.edMnLQ/schema/public.abK9xQ.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/encodings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sqldialects.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/sqldialects.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/uiDesigner.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Project.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/pr/controllers/UsersController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/pr/controllers/UsersController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/pr/dto/MessageDto.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/pr/dto/MessageDto.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/pr/dto/PostsDto.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/pr/dto/PostsDto.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/pr/dto/UserDto.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/pr/dto/UserDto.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/pr/forms/MessageForm.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/pr/models/Message.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/pr/models/Message.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/pr/models/Posts.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/pr/models/Posts.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/pr/models/User.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/pr/models/User.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/pr/repositories/MessageRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/pr/repositories/MessageRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/pr/repositories/PostsRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/pr/repositories/PostsRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/pr/repositories/UsersRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/pr/repositories/UsersRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/pr/security/details/UserDetailsImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/pr/security/details/UserDetailsImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/pr/services/AuthenticationService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/pr/services/AuthenticationService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/pr/services/AuthenticationServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/pr/services/AuthenticationServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/pr/services/AvatarService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/pr/services/AvatarService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/pr/services/AvatarServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/pr/services/AvatarServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/pr/services/MessageService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/pr/services/MessageService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/pr/services/MessageServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/pr/services/MessageServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/pr/services/PostsService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/pr/services/PostsService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/pr/services/PostsServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/pr/services/PostsServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/pr/services/UsersService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/pr/services/UsersService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/pr/services/UsersServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/pr/services/UsersServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/application.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/data.sql" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/css/bootstrap-theme.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/css/bootstrap-theme.css.map" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/css/bootstrap-theme.min.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/css/bootstrap-theme.min.css.map" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/css/bootstrap.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/css/bootstrap.css.map" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/css/bootstrap.min.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/css/bootstrap.min.css.map" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/fonts/glyphicons-halflings-regular.eot" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/fonts/glyphicons-halflings-regular.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/fonts/glyphicons-halflings-regular.ttf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/fonts/glyphicons-halflings-regular.woff" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/fonts/glyphicons-halflings-regular.woff2" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/js/bootstrap.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/js/bootstrap.min.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/js/npm.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/style.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/MessagesPage.ftl" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/MessagesPage.ftl" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/PostsPage.ftl" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/PostsPage.ftl" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/ProfileEdit.ftl" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/ProfileEdit.ftl" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/SearchPage.ftl" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/SearchPage.ftl" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/SignIn.ftl" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/SignIn.ftl" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/UserPage.ftl" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/UserPage.ftl" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/UsersPage.ftl" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/UsersPage.ftl" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/application.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/data.sql" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/pr/app/Application.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/pr/app/Application.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/pr/controllers/UsersController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/pr/controllers/UsersController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/pr/dto/MessageDto$MessageDtoBuilder.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/pr/dto/MessageDto$MessageDtoBuilder.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/pr/dto/MessageDto.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/pr/dto/MessageDto.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/pr/dto/PostsDto$PostsDtoBuilder.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/pr/dto/PostsDto$PostsDtoBuilder.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/pr/dto/PostsDto.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/pr/dto/PostsDto.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/pr/dto/UserDto$UserDtoBuilder.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/pr/dto/UserDto$UserDtoBuilder.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/pr/dto/UserDto.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/pr/dto/UserDto.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/pr/forms/MessageForm$MessageFormBuilder.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/pr/forms/MessageForm.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/pr/models/Message$MessageBuilder.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/pr/models/Message$MessageBuilder.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/pr/models/Message.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/pr/models/Message.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/pr/models/Posts$PostsBuilder.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/pr/models/Posts$PostsBuilder.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/pr/models/Posts.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/pr/models/Posts.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/pr/models/User$UserBuilder.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/pr/models/User$UserBuilder.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/pr/models/User.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/pr/models/User.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/pr/repositories/MessageRepository.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/pr/repositories/MessageRepository.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/pr/repositories/PostsRepository.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/pr/repositories/PostsRepository.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/pr/repositories/UsersRepository.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/pr/repositories/UsersRepository.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/pr/security/details/UserDetailsImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/pr/security/details/UserDetailsImpl.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/pr/services/AuthenticationService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/pr/services/AuthenticationService.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/pr/services/AuthenticationServiceImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/pr/services/AuthenticationServiceImpl.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/pr/services/AvatarService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/pr/services/AvatarService.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/pr/services/AvatarServiceImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/pr/services/AvatarServiceImpl.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/pr/services/MessageService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/pr/services/MessageService.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/pr/services/MessageServiceImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/pr/services/MessageServiceImpl.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/pr/services/PostsService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/pr/services/PostsService.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/pr/services/PostsServiceImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/pr/services/PostsServiceImpl.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/pr/services/UsersService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/pr/services/UsersService.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/pr/services/UsersServiceImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/pr/services/UsersServiceImpl.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/css/bootstrap-theme.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/css/bootstrap-theme.css.map" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/css/bootstrap-theme.min.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/css/bootstrap-theme.min.css.map" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/css/bootstrap.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/css/bootstrap.css.map" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/css/bootstrap.min.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/css/bootstrap.min.css.map" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/fonts/glyphicons-halflings-regular.eot" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/fonts/glyphicons-halflings-regular.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/fonts/glyphicons-halflings-regular.ttf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/fonts/glyphicons-halflings-regular.woff" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/fonts/glyphicons-halflings-regular.woff2" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/js/bootstrap.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/js/bootstrap.min.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/js/npm.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/style.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/templates/MessagesPage.ftl" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/templates/MessagesPage.ftl" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/templates/PostsPage.ftl" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/templates/PostsPage.ftl" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/templates/ProfileEdit.ftl" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/templates/ProfileEdit.ftl" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/templates/SearchPage.ftl" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/templates/SearchPage.ftl" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/templates/SignIn.ftl" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/templates/SignIn.ftl" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/templates/UserPage.ftl" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/templates/UserPage.ftl" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/templates/UsersPage.ftl" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/templates/UsersPage.ftl" afterDir="false" />
+    </list>
     <ignored path="$PROJECT_DIR$/target/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
-    <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
-  </component>
-  <component name="CoverageDataManager">
-    <SUITE FILE_PATH="coverage/Project$Application.ic" NAME="Application Coverage Results" MODIFIED="1530278898373" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
   </component>
   <component name="DatabaseView">
     <option name="SHOW_INTERMEDIATE" value="true" />
@@ -73,17 +189,7 @@
         <item name="schemas" type="d4e8921:DatabaseStructure$FamilyGroup" />
         <item name="public: schema" type="a16502c0:PostgresImplModel$Schema" />
         <item name="tables" type="d4e8921:DatabaseStructure$FamilyGroup" />
-        <item name="persistent_logins: table" type="a93d6ac6:PostgresImplModel$LocalTable" />
-      </path>
-      <path>
-        <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
-        <item name="postgres@localhost" type="feb32156:DbDataSourceImpl" />
-        <item name="databases" type="d4e8921:DatabaseStructure$FamilyGroup" />
-        <item name="postgres: database" type="6d9b600a:PostgresImplModel$Database" />
-        <item name="schemas" type="d4e8921:DatabaseStructure$FamilyGroup" />
-        <item name="public: schema" type="a16502c0:PostgresImplModel$Schema" />
-        <item name="tables" type="d4e8921:DatabaseStructure$FamilyGroup" />
-        <item name="service_user: table" type="a93d6ac6:PostgresImplModel$LocalTable" />
+        <item name="chat_list: table" type="a93d6ac6:PostgresImplModel$LocalTable" />
       </path>
       <path>
         <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
@@ -95,74 +201,198 @@
         <item name="tables" type="d4e8921:DatabaseStructure$FamilyGroup" />
         <item name="user_messages: table" type="a93d6ac6:PostgresImplModel$LocalTable" />
       </path>
-      <path>
-        <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
-        <item name="postgres@localhost" type="feb32156:DbDataSourceImpl" />
-        <item name="databases" type="d4e8921:DatabaseStructure$FamilyGroup" />
-        <item name="postgres: database" type="6d9b600a:PostgresImplModel$Database" />
-        <item name="schemas" type="d4e8921:DatabaseStructure$FamilyGroup" />
-        <item name="public: schema" type="a16502c0:PostgresImplModel$Schema" />
-        <item name="tables" type="d4e8921:DatabaseStructure$FamilyGroup" />
-        <item name="users_avatars: table" type="a93d6ac6:PostgresImplModel$LocalTable" />
-      </path>
-      <path>
-        <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
-        <item name="postgres@localhost" type="feb32156:DbDataSourceImpl" />
-        <item name="databases" type="d4e8921:DatabaseStructure$FamilyGroup" />
-        <item name="postgres: database" type="6d9b600a:PostgresImplModel$Database" />
-        <item name="schemas" type="d4e8921:DatabaseStructure$FamilyGroup" />
-        <item name="public: schema" type="a16502c0:PostgresImplModel$Schema" />
-        <item name="tables" type="d4e8921:DatabaseStructure$FamilyGroup" />
-        <item name="users_posts: table" type="a93d6ac6:PostgresImplModel$LocalTable" />
-      </path>
     </expand>
     <select />
   </component>
-  <component name="DebuggerManager">
-    <breakpoint_any converted="true">
-      <breakpoint>
-        <option name="NOTIFY_CAUGHT" value="true" />
-        <option name="NOTIFY_UNCAUGHT" value="true" />
-        <option name="ENABLED" value="false" />
-        <option name="LOG_ENABLED" value="false" />
-        <option name="LOG_EXPRESSION_ENABLED" value="false" />
-        <option name="SUSPEND_POLICY" value="SuspendAll" />
-        <option name="SUSPEND" value="true" />
-        <option name="COUNT_FILTER_ENABLED" value="false" />
-        <option name="COUNT_FILTER" value="0" />
-        <option name="CONDITION_ENABLED" value="true" />
-        <option name="CLASS_FILTERS_ENABLED" value="false" />
-        <option name="INSTANCE_FILTERS_ENABLED" value="false" />
-        <option name="CONDITION" value="" />
-        <option name="LOG_MESSAGE" value="" />
-      </breakpoint>
-      <breakpoint>
-        <option name="NOTIFY_CAUGHT" value="true" />
-        <option name="NOTIFY_UNCAUGHT" value="true" />
-        <option name="ENABLED" value="false" />
-        <option name="LOG_ENABLED" value="false" />
-        <option name="LOG_EXPRESSION_ENABLED" value="false" />
-        <option name="SUSPEND_POLICY" value="SuspendAll" />
-        <option name="SUSPEND" value="true" />
-        <option name="COUNT_FILTER_ENABLED" value="false" />
-        <option name="COUNT_FILTER" value="0" />
-        <option name="CONDITION_ENABLED" value="true" />
-        <option name="CLASS_FILTERS_ENABLED" value="false" />
-        <option name="INSTANCE_FILTERS_ENABLED" value="false" />
-        <option name="CONDITION" value="" />
-        <option name="LOG_MESSAGE" value="" />
-      </breakpoint>
-    </breakpoint_any>
-    <breakpoint_rules converted="true" />
-    <ui_properties converted="true" />
+  <component name="FUSProjectUsageTrigger">
+    <session id="1752723653">
+      <usages-collector id="statistics.lifecycle.project">
+        <counts>
+          <entry key="project.closed" value="55" />
+          <entry key="project.open.time.13" value="2" />
+          <entry key="project.open.time.14" value="2" />
+          <entry key="project.open.time.15" value="4" />
+          <entry key="project.open.time.16" value="7" />
+          <entry key="project.open.time.17" value="4" />
+          <entry key="project.open.time.18" value="2" />
+          <entry key="project.open.time.19" value="4" />
+          <entry key="project.open.time.2" value="1" />
+          <entry key="project.open.time.20" value="5" />
+          <entry key="project.open.time.21" value="9" />
+          <entry key="project.open.time.22" value="4" />
+          <entry key="project.open.time.23" value="2" />
+          <entry key="project.open.time.24" value="4" />
+          <entry key="project.open.time.25" value="1" />
+          <entry key="project.open.time.26" value="1" />
+          <entry key="project.open.time.28" value="2" />
+          <entry key="project.open.time.29" value="1" />
+          <entry key="project.open.time.4" value="2" />
+          <entry key="project.opened" value="57" />
+        </counts>
+      </usages-collector>
+      <usages-collector id="statistics.file.extensions.open">
+        <counts>
+          <entry key="chat_list" value="4" />
+          <entry key="chats" value="6" />
+          <entry key="class" value="6" />
+          <entry key="css" value="12" />
+          <entry key="follow_users" value="4" />
+          <entry key="ftl" value="54" />
+          <entry key="hibernate_sequence" value="1" />
+          <entry key="java" value="208" />
+          <entry key="js" value="30" />
+          <entry key="persistent_logins" value="14" />
+          <entry key="png" value="2" />
+          <entry key="posts_likes" value="2" />
+          <entry key="properties" value="7" />
+          <entry key="reposts" value="1" />
+          <entry key="service_user" value="7" />
+          <entry key="sql" value="7" />
+          <entry key="ts" value="1" />
+          <entry key="user_messages" value="6" />
+          <entry key="users_avatars" value="2" />
+          <entry key="users_posts" value="3" />
+          <entry key="xml" value="6" />
+        </counts>
+      </usages-collector>
+      <usages-collector id="statistics.file.types.open">
+        <counts>
+          <entry key="CLASS" value="6" />
+          <entry key="CSS" value="12" />
+          <entry key="Database Element" value="49" />
+          <entry key="FTL" value="54" />
+          <entry key="Image" value="2" />
+          <entry key="JAVA" value="208" />
+          <entry key="JavaScript" value="30" />
+          <entry key="Properties" value="7" />
+          <entry key="SQL" value="3" />
+          <entry key="Scratch" value="5" />
+          <entry key="TypeScript" value="1" />
+          <entry key="XML" value="6" />
+        </counts>
+      </usages-collector>
+      <usages-collector id="statistics.file.extensions.edit">
+        <counts>
+          <entry key="cell" value="8" />
+          <entry key="css" value="135" />
+          <entry key="dummy" value="13" />
+          <entry key="ftl" value="2185" />
+          <entry key="html" value="8" />
+          <entry key="java" value="4695" />
+          <entry key="js" value="3357" />
+          <entry key="properties" value="6" />
+          <entry key="sql" value="148" />
+          <entry key="txt" value="21" />
+          <entry key="xml" value="26" />
+        </counts>
+      </usages-collector>
+      <usages-collector id="statistics.file.types.edit">
+        <counts>
+          <entry key="CSS" value="135" />
+          <entry key="FTL" value="2185" />
+          <entry key="HTML" value="8" />
+          <entry key="JAVA" value="4694" />
+          <entry key="JavaScript" value="3357" />
+          <entry key="PLAIN_TEXT" value="34" />
+          <entry key="Properties" value="6" />
+          <entry key="SQL" value="1" />
+          <entry key="Scratch" value="156" />
+          <entry key="XML" value="26" />
+        </counts>
+      </usages-collector>
+    </session>
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="UsersController.java" pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/resources/static/js/app.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="640">
+              <caret line="77" column="1" selection-start-line="77" selection-start-column="1" selection-end-line="77" selection-end-column="1" />
+              <folding>
+                <element signature="n#style#0;n#td#0;n#tr#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#td#0;n#tr#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#td#0;n#tr#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#td#0;n#tr#0;n#!!top" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/pr/models/Chat.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="408">
+              <caret line="24" lean-forward="true" selection-start-line="24" selection-end-line="24" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/pr/repositories/PostsRepository.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="300">
+              <caret line="41" column="74" lean-forward="true" selection-start-line="41" selection-start-column="74" selection-end-line="41" selection-end-column="74" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/resources/templates/Chatnew.ftl">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="1479">
+              <caret line="87" column="85" selection-start-line="87" selection-start-column="85" selection-end-line="87" selection-end-column="85" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/main/resources/static/js/js.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="589">
+              <caret line="54" column="45" lean-forward="true" selection-start-line="54" selection-start-column="45" selection-end-line="54" selection-end-column="45" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/resources/templates/PostsPage.ftl">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="538">
+              <caret line="115" column="109" selection-start-line="115" selection-start-column="109" selection-end-line="115" selection-end-column="109" />
+              <folding>
+                <element signature="n#style#0;n#a#2;n#div#0;n#div#1;n#div#0;n#div#1;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/pr/repositories/MessageRepository.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="272">
+              <caret line="22" column="132" selection-start-line="22" selection-start-column="132" selection-end-line="22" selection-end-column="132" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="das://7d002a64-444b-46f9-8d20-60663741d674/database/postgres/schema/public/table/user_messages">
+          <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
+            <state>
+              <filtering enabled="true" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/pr/controllers/UsersController.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="510">
-              <caret line="103" column="108" selection-start-line="103" selection-start-column="108" selection-end-line="103" selection-end-column="108" />
+            <state relative-caret-position="165">
+              <caret line="229" column="15" selection-start-line="229" selection-start-column="15" selection-end-line="229" selection-end-column="15" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -170,89 +400,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="UserPage.ftl" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/resources/templates/UserPage.ftl">
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/pr/services/PostsServiceImpl.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="153">
-              <caret line="9" column="45" lean-forward="true" selection-start-line="9" selection-start-column="45" selection-end-line="9" selection-end-column="45" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="UsersPage.ftl" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/main/resources/templates/UsersPage.ftl">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="68">
-              <caret line="4" column="20" selection-start-line="4" selection-start-column="20" selection-end-line="4" selection-end-column="20" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="service_user" pinned="false" current-in-tab="false">
-        <entry file="das://f93b4457-f8bc-431e-8167-71f7b2fbf9cd/database/postgres/schema/public/table/service_user">
-          <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
-            <state>
-              <filtering enabled="true" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="user_messages" pinned="false" current-in-tab="false">
-        <entry file="das://f93b4457-f8bc-431e-8167-71f7b2fbf9cd/database/postgres/schema/public/table/user_messages">
-          <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
-            <state>
-              <filtering enabled="true" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Application.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/pr/app/Application.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="238">
-              <caret line="14" column="13" selection-start-line="14" selection-start-column="13" selection-end-line="14" selection-end-column="13" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="AuthenticationServiceImpl.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/pr/services/AuthenticationServiceImpl.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-44">
-              <caret line="41" column="42" lean-forward="true" selection-start-line="41" selection-start-column="42" selection-end-line="41" selection-end-column="42" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="users_avatars" pinned="false" current-in-tab="false">
-        <entry file="das://f93b4457-f8bc-431e-8167-71f7b2fbf9cd/database/postgres/schema/public/table/users_avatars">
-          <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
-            <state>
-              <filtering enabled="true" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="users_posts" pinned="false" current-in-tab="false">
-        <entry file="das://f93b4457-f8bc-431e-8167-71f7b2fbf9cd/database/postgres/schema/public/table/users_posts">
-          <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
-            <state>
-              <filtering enabled="true" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="users_avatars_user_id_uindex" pinned="false" current-in-tab="false">
-        <entry file="das://f93b4457-f8bc-431e-8167-71f7b2fbf9cd/database/postgres/schema/public/table/users_avatars/index/users_avatars_user_id_uindex">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="17">
-              <caret line="1" column="20" selection-start-line="1" selection-start-column="20" selection-end-line="1" selection-end-column="20" />
+            <state relative-caret-position="-808">
+              <caret line="44" column="55" selection-start-line="44" selection-start-column="44" selection-end-line="44" selection-end-column="55" />
             </state>
           </provider>
         </entry>
@@ -269,66 +421,77 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>hr</find>
-      <find>secu</find>
-      <find>body</find>
-      <find>user</find>
+      <find>conn</find>
+      <find>send</find>
+      <find>gree</find>
+      <find>user_2</find>
+      <find>chat</find>
+      <find>|</find>
+      <find>connect</find>
+      <find>left clea</find>
     </findStrings>
+    <dirStrings>
+      <dir>D:\OLD\IdeaProjects\Project\src\main\java</dir>
+      <dir>D:\OLD\IdeaProjects\Project</dir>
+    </dirStrings>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
   </component>
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/src/main/resources/static/style.css" />
-        <option value="$PROJECT_DIR$/src/main/java/pr/services/FilesServiceImpl.java" />
-        <option value="$PROJECT_DIR$/src/main/java/pr/services/FileService.java" />
-        <option value="$PROJECT_DIR$/pom.xml" />
-        <option value="$PROJECT_DIR$/src/main/java/pr/forms/UploadForm.java" />
-        <option value="$PROJECT_DIR$/src/main/java/pr/util/AvatarUtil.java" />
-        <option value="$PROJECT_DIR$/src/main/resources/templates/PostsPage2.ftl" />
-        <option value="$PROJECT_DIR$/src/main/java/pr/services/StaticResourseConfiguration.java" />
-        <option value="$PROJECT_DIR$/src/main/java/pr/services/StaticResourceConfiguration2.java" />
-        <option value="$PROJECT_DIR$/src/main/java/pr/services/StaticResourceConfiguration.java" />
-        <option value="$PROJECT_DIR$/src/main/java/pr/security/details/UserDetailsImpl.java" />
-        <option value="$PROJECT_DIR$/src/main/java/pr/repositories/PostsRepository.java" />
-        <option value="$PROJECT_DIR$/src/main/java/pr/models/Posts.java" />
-        <option value="$PROJECT_DIR$/src/main/java/pr/models/FileInfo.java" />
+        <option value="$PROJECT_DIR$/src/main/java/pr/models/persistentLogins.java" />
+        <option value="$PROJECT_DIR$/src/main/java/pr/repositories/Repository.java" />
+        <option value="$PROJECT_DIR$/src/main/java/pr/services/Service.java" />
+        <option value="$PROJECT_DIR$/src/main/java/pr/security/config/SecurityConfig.java" />
+        <option value="$PROJECT_DIR$/src/main/java/pr/security/details/UserDetailsServiceImpl.java" />
+        <option value="$PROJECT_DIR$/src/main/java/pr/models/PersistentLogins.java" />
+        <option value="$PROJECT_DIR$/src/main/resources/static/Chat.html" />
+        <option value="$PROJECT_DIR$/src/main/java/pr/Config/Config.java" />
+        <option value="$PROJECT_DIR$/src/main/java/pr/app/HelloMessage.java" />
+        <option value="$PROJECT_DIR$/src/main/resources/static/index.html" />
         <option value="$PROJECT_DIR$/src/main/resources/application.properties" />
-        <option value="$PROJECT_DIR$/src/main/java/pr/util/FilesUtil.java" />
-        <option value="$PROJECT_DIR$/src/main/resources/static/js/fileUpload.js" />
-        <option value="$PROJECT_DIR$/src/main/resources/templates/FileUpload.ftl" />
-        <option value="$PROJECT_DIR$/src/main/java/pr/forms/MessageForm.java" />
-        <option value="$PROJECT_DIR$/src/main/java/pr/forms/UserForm.java" />
-        <option value="$PROJECT_DIR$/src/main/java/pr/models/Message.java" />
-        <option value="$PROJECT_DIR$/src/main/java/pr/services/AuthenticationServiceImpl.java" />
-        <option value="$PROJECT_DIR$/src/main/java/pr/models/Avatar.java" />
-        <option value="$PROJECT_DIR$/src/main/resources/static/js/toggle.js" />
-        <option value="$PROJECT_DIR$/src/main/resources/templates/SignUp.ftl" />
-        <option value="$PROJECT_DIR$/src/main/resources/templates/SignIn.ftl" />
-        <option value="$PROJECT_DIR$/src/main/resources/templates/ProfileEdit.ftl" />
+        <option value="$PROJECT_DIR$/src/main/java/pr/config/WebSocketConfig.java" />
+        <option value="$PROJECT_DIR$/src/main/java/pr/models/RememberMe.java" />
+        <option value="$PROJECT_DIR$/src/main/resources/templates/FeedPage.ftl" />
         <option value="$PROJECT_DIR$/src/main/resources/templates/SearchPage.ftl" />
-        <option value="$PROJECT_DIR$/src/main/resources/templates/PostsPage.ftl" />
-        <option value="$PROJECT_DIR$/src/main/java/pr/repositories/AvatarRepository.java" />
-        <option value="$PROJECT_DIR$/src/main/java/pr/repositories/UsersRepository.java" />
-        <option value="$PROJECT_DIR$/src/main/java/pr/services/UsersService.java" />
-        <option value="$PROJECT_DIR$/src/main/java/pr/dto/UserDto.java" />
-        <option value="$PROJECT_DIR$/src/main/resources/templates/MessagesPage.ftl" />
-        <option value="$PROJECT_DIR$/src/main/java/pr/app/Application.java" />
-        <option value="$PROJECT_DIR$/src/main/java/pr/dto/MessageDto.java" />
-        <option value="$PROJECT_DIR$/src/main/java/pr/dto/PostsDto.java" />
-        <option value="$PROJECT_DIR$/src/main/java/pr/repositories/MessageRepository.java" />
-        <option value="$PROJECT_DIR$/src/main/java/pr/services/AuthenticationService.java" />
-        <option value="$PROJECT_DIR$/src/main/java/pr/services/AvatarService.java" />
-        <option value="$PROJECT_DIR$/src/main/java/pr/services/AvatarServiceImpl.java" />
-        <option value="$PROJECT_DIR$/src/main/java/pr/services/MessageService.java" />
-        <option value="$PROJECT_DIR$/src/main/java/pr/services/MessageServiceImpl.java" />
-        <option value="$PROJECT_DIR$/src/main/java/pr/services/PostsService.java" />
-        <option value="$PROJECT_DIR$/src/main/java/pr/services/PostsServiceImpl.java" />
-        <option value="$PROJECT_DIR$/src/main/java/pr/services/UsersServiceImpl.java" />
-        <option value="$PROJECT_DIR$/src/main/resources/data.sql" />
-        <option value="$PROJECT_DIR$/src/main/java/pr/models/User.java" />
-        <option value="$PROJECT_DIR$/src/main/java/pr/controllers/UsersController.java" />
-        <option value="$PROJECT_DIR$/src/main/resources/templates/UserPage.ftl" />
         <option value="$PROJECT_DIR$/src/main/resources/templates/UsersPage.ftl" />
+        <option value="$PROJECT_DIR$/src/main/resources/templates/PostsPage.ftl" />
+        <option value="$PROJECT_DIR$/src/main/java/pr/dto/ChatDto.java" />
+        <option value="$PROJECT_DIR$/src/main/java/pr/services/ChatServiceImpl.java" />
+        <option value="$PROJECT_DIR$/src/main/resources/templates/UserPage.ftl" />
+        <option value="$PROJECT_DIR$/src/main/resources/templates/Chat.ftl" />
+        <option value="$PROJECT_DIR$/src/main/java/pr/repositories/ChatRepository.java" />
+        <option value="$PROJECT_DIR$/src/main/resources/templates/Chatold.ftl" />
+        <option value="$PROJECT_DIR$/src/main/java/pr/chat/HelloMessage.java" />
+        <option value="$PROJECT_DIR$/src/main/java/pr/services/UsersService.java" />
+        <option value="$PROJECT_DIR$/src/main/java/pr/services/UsersServiceImpl.java" />
+        <option value="$PROJECT_DIR$/src/main/java/pr/services/ChatService.java" />
+        <option value="$PROJECT_DIR$/src/main/java/pr/dto/UserDto.java" />
+        <option value="$PROJECT_DIR$/src/main/java/pr/models/Chat.java" />
+        <option value="$PROJECT_DIR$/src/main/java/pr/models/User.java" />
+        <option value="$APPLICATION_CONFIG_DIR$/consoles/db/7d002a64-444b-46f9-8d20-60663741d674/console_1.sql" />
+        <option value="$PROJECT_DIR$/src/main/java/pr/repositories/UsersRepository.java" />
+        <option value="$APPLICATION_CONFIG_DIR$/consoles/db/7d002a64-444b-46f9-8d20-60663741d674/console_2.sql" />
+        <option value="$PROJECT_DIR$/src/main/java/pr/services/AuthenticationServiceImpl.java" />
+        <option value="$PROJECT_DIR$/src/main/java/pr/services/AuthenticationService.java" />
+        <option value="$APPLICATION_CONFIG_DIR$/consoles/db/7d002a64-444b-46f9-8d20-60663741d674/console.sql" />
+        <option value="$PROJECT_DIR$/src/main/java/pr/dto/MessageDto.java" />
+        <option value="$PROJECT_DIR$/src/main/java/pr/models/Message.java" />
+        <option value="$PROJECT_DIR$/src/main/java/pr/repositories/AvatarRepository.java" />
+        <option value="$PROJECT_DIR$/src/main/java/pr/services/PostsServiceImpl.java" />
+        <option value="$PROJECT_DIR$/src/main/java/pr/repositories/PostsRepository.java" />
+        <option value="$PROJECT_DIR$/src/main/resources/static/js/js.js" />
+        <option value="$PROJECT_DIR$/src/main/resources/static/css/chat.css" />
+        <option value="$PROJECT_DIR$/src/main/java/pr/controllers/GreetingController.java" />
+        <option value="$PROJECT_DIR$/src/main/resources/templates/Chatnew.ftl" />
+        <option value="$PROJECT_DIR$/pom.xml" />
+        <option value="$PROJECT_DIR$/src/main/java/pr/services/MessageService.java" />
+        <option value="$PROJECT_DIR$/src/main/java/pr/controllers/UsersController.java" />
+        <option value="$PROJECT_DIR$/src/main/java/pr/services/MessageServiceImpl.java" />
+        <option value="$PROJECT_DIR$/src/main/resources/static/js/app.js" />
+        <option value="$PROJECT_DIR$/src/main/java/pr/repositories/MessageRepository.java" />
       </list>
     </option>
   </component>
@@ -352,32 +515,24 @@
           <item name="" type="16c1761:MavenProjectsStructure$RootNode" />
           <item name="Project" type="9519ce18:MavenProjectsStructure$ProjectNode" />
         </path>
-        <path>
-          <item name="" type="16c1761:MavenProjectsStructure$RootNode" />
-          <item name="Project" type="9519ce18:MavenProjectsStructure$ProjectNode" />
-          <item name="Lifecycle" type="58874e2:MavenProjectsStructure$LifecycleNode" />
-        </path>
       </expand>
       <select />
     </treeState>
   </component>
-  <component name="NodePackageJsonFileManager">
-    <packageJsonPaths />
-  </component>
   <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="-165" />
-    <option name="y" value="223" />
+    <option name="x" value="-59" />
+    <option name="y" value="-8" />
     <option name="width" value="1936" />
     <option name="height" value="1056" />
+  </component>
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
+    <ConfirmationsSetting value="1" id="Add" />
   </component>
   <component name="ProjectView">
     <navigator proportions="" version="1">
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope" />
-      <pane id="AndroidView" />
-      <pane id="PackagesPane" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -419,6 +574,24 @@
               <item name="java" type="462c0819:PsiDirectoryNode" />
               <item name="pr" type="462c0819:PsiDirectoryNode" />
               <item name="app" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Project" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Project" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="pr" type="462c0819:PsiDirectoryNode" />
+              <item name="chat" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Project" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Project" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="pr" type="462c0819:PsiDirectoryNode" />
+              <item name="config" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="Project" type="b2602c69:ProjectViewProjectNode" />
@@ -495,54 +668,62 @@
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="main" type="462c0819:PsiDirectoryNode" />
               <item name="resources" type="462c0819:PsiDirectoryNode" />
+              <item name="static" type="462c0819:PsiDirectoryNode" />
+              <item name="css" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Project" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Project" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="resources" type="462c0819:PsiDirectoryNode" />
+              <item name="static" type="462c0819:PsiDirectoryNode" />
+              <item name="js" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Project" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Project" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="resources" type="462c0819:PsiDirectoryNode" />
               <item name="templates" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
         </subPane>
       </pane>
+      <pane id="AndroidView" />
+      <pane id="Scope" />
+      <pane id="PackagesPane" />
     </panes>
   </component>
   <component name="PropertiesComponent">
-    <property name="GoToClass.includeLibraries" value="false" />
-    <property name="GoToClass.toSaveIncludeLibraries" value="false" />
-    <property name="GoToFile.includeJavaFiles" value="false" />
-    <property name="MemberChooser.copyJavadoc" value="false" />
-    <property name="MemberChooser.showClasses" value="true" />
-    <property name="MemberChooser.sorted" value="false" />
+    <property name="DatabaseDriversLRU" value="postgresql" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.intellij.database.dataSource.DataSourceTemplate" value="PostgreSQL" />
-    <property name="com.intellij.ide.scratch.LRUPopupBuilder$1/Change SQL Dialect" value="PostgreSQL" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1540674675912" />
     <property name="database.console.LAST_STATE" value="false" />
-    <property name="last_opened_file_path" value="$USER_HOME$/Desktop/JAVA/ServletsDemo" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
     <property name="project.structure.last.edited" value="Modules" />
-    <property name="project.structure.proportion" value="0.15" />
-    <property name="project.structure.side.proportion" value="0.2" />
-    <property name="run.code.analysis.last.selected.profile" value="pProject Default" />
-    <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
+    <property name="project.structure.proportion" value="0.0" />
+    <property name="project.structure.side.proportion" value="0.0" />
+    <property name="restartRequiresConfirmation" value="false" />
+    <property name="settings.editor.selected.configurable" value="SQL Dialects" />
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
-      <recent name="C:\Users\Роман\IdeaProjects\Project\src\main\resources\static" />
-      <recent name="C:\Users\Роман\IdeaProjects\Project\src\main\java\pr\services" />
-      <recent name="C:\Users\Роман\IdeaProjects\Project\src\main\resources\static\d" />
-      <recent name="C:\Users\Роман\IdeaProjects\Project\src\main\resources" />
-      <recent name="C:\Users\Роман\IdeaProjects\Project\src\main\resources\test" />
-    </key>
-    <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
-      <recent name="" />
+      <recent name="D:\OLD\IdeaProjects\Project\src\main\resources\test" />
+      <recent name="D:\OLD\IdeaProjects\Project\src\main\resources\static\js" />
     </key>
     <key name="CopyClassDialog.RECENTS_KEY">
-      <recent name="pr.services" />
-      <recent name="pr.forms" />
+      <recent name="pr.dto" />
     </key>
     <key name="CopyFile.RECENT_KEYS">
-      <recent name="C:\Users\Роман\IdeaProjects\Project\src\main\resources\templates" />
-      <recent name="C:\Users\Роман\IdeaProjects\Project\src\main\resources" />
-      <recent name="C:\Users\Роман\IdeaProjects\Project\src\main\resources\static\css" />
+      <recent name="D:\OLD\IdeaProjects\Project\src\main\resources\templates" />
+      <recent name="D:\OLD\IdeaProjects\Project\src\main\java\pr\app" />
+      <recent name="D:\OLD\IdeaProjects\Project\src\main\resources\static" />
+      <recent name="D:\OLD\IdeaProjects\Project\src\main\resources\static\css" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -557,163 +738,124 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Application.Application">
-    <configuration default="true" type="Applet" factoryName="Applet">
-      <option name="POLICY_FILE" value="$APPLICATION_HOME_DIR$/bin/appletviewer.policy" />
-    </configuration>
-    <configuration name="Application" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+  <component name="RunManager">
+    <configuration name="app" type="Application" factoryName="Application" singleton="true">
       <option name="MAIN_CLASS_NAME" value="pr.app.Application" />
       <module name="Project" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
     </configuration>
-    <configuration default="true" type="Application" factoryName="Application">
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
-    </configuration>
-    <configuration default="true" type="JUnit" factoryName="JUnit">
-      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
-      <option name="ALTERNATIVE_JRE_PATH" />
-      <option name="PACKAGE_NAME" />
-      <option name="MAIN_CLASS_NAME" />
-      <option name="METHOD_NAME" />
-      <option name="TEST_OBJECT" value="class" />
-      <option name="VM_PARAMETERS" value="-ea" />
-      <option name="PARAMETERS" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
-      <option name="PASS_PARENT_ENVS" value="true" />
-      <option name="TEST_SEARCH_SCOPE">
-        <value defaultName="moduleWithDependencies" />
-      </option>
-      <patterns />
-    </configuration>
-    <configuration name="Application" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
-      <module name="Project" />
-      <option name="SPRING_BOOT_MAIN_CLASS" value="pr.app.Application" />
-    </configuration>
-    <configuration default="true" type="TestNG" factoryName="TestNG">
-      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
-      <option name="ALTERNATIVE_JRE_PATH" />
-      <option name="SUITE_NAME" />
-      <option name="PACKAGE_NAME" />
-      <option name="MAIN_CLASS_NAME" />
-      <option name="METHOD_NAME" />
-      <option name="GROUP_NAME" />
-      <option name="TEST_OBJECT" value="CLASS" />
-      <option name="VM_PARAMETERS" value="-ea" />
-      <option name="PARAMETERS" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
-      <option name="OUTPUT_DIRECTORY" />
-      <option name="PASS_PARENT_ENVS" value="true" />
-      <option name="TEST_SEARCH_SCOPE">
-        <value defaultName="moduleWithDependencies" />
-      </option>
-      <option name="USE_DEFAULT_REPORTERS" value="false" />
-      <option name="PROPERTIES_FILE" />
-      <properties />
-      <listeners />
-    </configuration>
-    <configuration default="true" type="#org.jetbrains.idea.devkit.run.PluginConfigurationType" factoryName="Plugin">
-      <module name="" />
-      <option name="VM_PARAMETERS" value="-Xmx512m -Xms256m -XX:MaxPermSize=250m" />
-      <option name="PROGRAM_PARAMETERS" />
-      <predefined_log_file id="idea.log" enabled="true" />
-    </configuration>
-    <configuration name="&lt;template&gt;" type="WebApp" default="true" selected="false">
-      <Host>localhost</Host>
-      <Port>5050</Port>
-    </configuration>
-    <list>
-      <item itemvalue="Spring Boot.Application" />
-      <item itemvalue="Application.Application" />
-    </list>
-    <recent_temporary>
-      <list>
-        <item itemvalue="Application.Application" />
-      </list>
-    </recent_temporary>
   </component>
   <component name="SvnConfiguration">
     <configuration />
   </component>
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
-      <changelist id="ea230109-0e54-4961-99bd-1a5eb927b367" name="Default" comment="" />
-      <created>1527464731469</created>
+      <changelist id="79140664-5e05-40c0-bb12-4b66f91a7ec2" name="Default Changelist" comment="" />
+      <created>1535562318550</created>
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
-      <updated>1527464731469</updated>
-      <workItem from="1527464736492" duration="8372000" />
-      <workItem from="1527509990218" duration="1077000" />
-      <workItem from="1527511163294" duration="5522000" />
-      <workItem from="1527552366251" duration="97000" />
-      <workItem from="1527554919695" duration="319000" />
-      <workItem from="1527589537361" duration="600000" />
-      <workItem from="1527608728229" duration="599000" />
-      <workItem from="1527614867340" duration="1825000" />
-      <workItem from="1527695029378" duration="3000000" />
-      <workItem from="1527766228388" duration="10885000" />
-      <workItem from="1527958360977" duration="1986000" />
-      <workItem from="1528282766220" duration="599000" />
-      <workItem from="1529072222832" duration="636000" />
-      <workItem from="1529154024569" duration="599000" />
-      <workItem from="1529273120069" duration="19385000" />
-      <workItem from="1529318763025" duration="10492000" />
-      <workItem from="1529333195053" duration="1377000" />
-      <workItem from="1529419638977" duration="614000" />
-      <workItem from="1529506048517" duration="26162000" />
-      <workItem from="1529680680180" duration="1199000" />
-      <workItem from="1529940470977" duration="1198000" />
-      <workItem from="1529964893773" duration="17488000" />
-      <workItem from="1530030558011" duration="19969000" />
-      <workItem from="1530065244675" duration="59000" />
-      <workItem from="1530067093902" duration="2827000" />
-      <workItem from="1530100503535" duration="37526000" />
-      <workItem from="1530192290095" duration="29943000" />
-      <workItem from="1530277819816" duration="1979000" />
+      <updated>1535562318550</updated>
+      <workItem from="1535562320624" duration="13250000" />
+      <workItem from="1535584903343" duration="14000" />
+      <workItem from="1536328976682" duration="14184000" />
+      <workItem from="1536343986672" duration="599000" />
+      <workItem from="1536359294894" duration="6734000" />
+      <workItem from="1536839124780" duration="2523000" />
+      <workItem from="1536950147723" duration="4045000" />
+      <workItem from="1537180128924" duration="4643000" />
+      <workItem from="1537197596387" duration="7070000" />
+      <workItem from="1537266336961" duration="2412000" />
+      <workItem from="1537440290598" duration="2075000" />
+      <workItem from="1537521968967" duration="599000" />
+      <workItem from="1537537861914" duration="5234000" />
+      <workItem from="1537795811678" duration="678000" />
+      <workItem from="1537957398612" duration="1875000" />
+      <workItem from="1538040332679" duration="34097000" />
+      <workItem from="1538132021734" duration="17420000" />
+      <workItem from="1538157667896" duration="8835000" />
+      <workItem from="1538388562098" duration="4242000" />
+      <workItem from="1538407263076" duration="589000" />
+      <workItem from="1538408184058" duration="7533000" />
+      <workItem from="1538469879962" duration="9055000" />
+      <workItem from="1538562590185" duration="5369000" />
+      <workItem from="1538669406093" duration="955000" />
+      <workItem from="1538671077723" duration="2079000" />
+      <workItem from="1538748872138" duration="2529000" />
+      <workItem from="1538782313110" duration="649000" />
+      <workItem from="1538852668398" duration="4543000" />
+      <workItem from="1538907296526" duration="1824000" />
+      <workItem from="1538998863038" duration="7284000" />
+      <workItem from="1539089256242" duration="1144000" />
+      <workItem from="1539097933605" duration="1267000" />
+      <workItem from="1539126348277" duration="628000" />
+      <workItem from="1539179789203" duration="2397000" />
+      <workItem from="1539253824265" duration="1403000" />
+      <workItem from="1539262758928" duration="2282000" />
+      <workItem from="1539297084636" duration="599000" />
+      <workItem from="1539337144363" duration="9302000" />
+      <workItem from="1539380217892" duration="599000" />
+      <workItem from="1539617773061" duration="5810000" />
+      <workItem from="1539699926146" duration="5410000" />
+      <workItem from="1539804050314" duration="2016000" />
+      <workItem from="1539865771659" duration="5361000" />
+      <workItem from="1540125392415" duration="2911000" />
+      <workItem from="1540147029759" duration="2432000" />
+      <workItem from="1540216326637" duration="595000" />
+      <workItem from="1540223973335" duration="2294000" />
+      <workItem from="1540304323840" duration="1366000" />
+      <workItem from="1540318695856" duration="2410000" />
+      <workItem from="1540338734485" duration="599000" />
+      <workItem from="1540376044284" duration="1245000" />
+      <workItem from="1540388441930" duration="599000" />
+      <workItem from="1540400164106" duration="3271000" />
+      <workItem from="1540467536751" duration="599000" />
+      <workItem from="1540651769147" duration="15675000" />
+      <workItem from="1540679575823" duration="979000" />
+      <workItem from="1540719155241" duration="10282000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="206334000" />
+    <option name="totallyTimeSpent" value="256413000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
-    <editor active="true" />
     <layout>
-      <window_info anchor="right" id="Palette" order="2" />
-      <window_info anchor="bottom" id="Event Log" order="15" side_tool="true" />
-      <window_info anchor="right" id="Maven Projects" order="10" weight="0.32995737" />
-      <window_info anchor="bottom" id="Database Changes" order="12" show_stripe_button="false" />
-      <window_info id="Capture Tool" order="7" />
-      <window_info id="Designer" order="2" />
-      <window_info anchor="right" id="Database" order="5" visible="true" weight="0.16897655" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.20895523" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
-      <window_info anchor="right" id="Ant Build" order="4" weight="0.25" />
+      <window_info id="Designer" order="2" />
       <window_info id="UI Designer" order="3" />
-      <window_info anchor="bottom" id="Debug" order="3" weight="0.39935064" />
-      <window_info anchor="bottom" id="TODO" order="6" />
-      <window_info anchor="bottom" id="Messages" order="8" weight="0.32900432" />
-      <window_info anchor="right" id="Palette&#9;" order="6" />
-      <window_info id="Image Layers" order="5" />
-      <window_info anchor="bottom" id="Java Enterprise" order="11" weight="0.32900432" />
-      <window_info anchor="right" id="Capture Analysis" order="3" />
-      <window_info anchor="bottom" x="22" y="422" width="1876" height="195" id="Run" order="2" visible="true" weight="0.2012987" />
-      <window_info anchor="bottom" id="Version Control" order="13" show_stripe_button="false" />
-      <window_info anchor="right" id="Coverage" order="8" side_tool="true" />
-      <window_info anchor="bottom" id="Spring" order="7" />
-      <window_info anchor="bottom" id="Terminal" order="10" weight="0.32900432" />
-      <window_info anchor="bottom" id="Database Console" order="9" weight="0.32900432" />
-      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.49864498" visible="true" weight="0.25159913" />
-      <window_info anchor="right" id="Bean Validation" order="9" weight="0.32995737" />
-      <window_info id="Web" order="6" sideWeight="0.501355" side_tool="true" weight="0.2489339" />
-      <window_info anchor="right" id="Theme Preview" order="7" />
       <window_info id="Favorites" order="4" side_tool="true" />
-      <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
-      <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
-      <window_info anchor="bottom" id="SQL Generator" order="14" weight="0.32900432" />
-      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
+      <window_info id="Capture Tool" order="5" />
+      <window_info id="Image Layers" order="6" />
+      <window_info id="Web" order="7" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
-      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="1" weight="0.25" />
-      <window_info anchor="bottom" id="Find" order="1" weight="0.32900432" />
+      <window_info anchor="bottom" id="Find" order="1" weight="0.32827735" />
+      <window_info anchor="bottom" id="Run" order="2" weight="0.23943663" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.3997833" />
+      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
+      <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
+      <window_info anchor="bottom" id="TODO" order="6" />
+      <window_info anchor="bottom" id="Spring" order="7" weight="0.32900432" />
+      <window_info anchor="bottom" id="Database Console" order="8" weight="0.32286024" />
+      <window_info anchor="bottom" id="Terminal" order="9" weight="0.32900432" />
+      <window_info anchor="bottom" id="Event Log" order="10" side_tool="true" />
+      <window_info anchor="bottom" id="Messages" order="11" weight="0.32827735" />
+      <window_info anchor="bottom" id="Java Enterprise" order="12" weight="0.32900432" />
+      <window_info anchor="bottom" id="Database Changes" order="13" weight="0.32827735" />
+      <window_info anchor="bottom" id="Version Control" order="14" weight="0.32900432" />
+      <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
+      <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
+      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
+      <window_info anchor="right" id="Palette" order="3" />
+      <window_info anchor="right" id="Capture Analysis" order="4" />
+      <window_info anchor="right" id="Maven Projects" order="5" weight="0.32995737" />
+      <window_info anchor="right" id="Database" order="6" visible="true" weight="0.23933902" />
+      <window_info anchor="right" id="Palette&#9;" order="7" />
+      <window_info anchor="right" id="Theme Preview" order="8" />
+      <window_info anchor="right" id="Bean Validation" order="9" weight="0.32995737" />
     </layout>
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -722,296 +864,248 @@
   <component name="VcsContentAnnotationSettings">
     <option name="myLimit" value="2678400000" />
   </component>
-  <component name="XDebuggerManager">
-    <breakpoint-manager>
-      <option name="time" value="1" />
-    </breakpoint-manager>
-  </component>
   <component name="antWorkspaceConfiguration">
     <option name="IS_AUTOSCROLL_TO_SOURCE" value="false" />
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/main/resources/templates/SignUp.ftl">
+    <entry file="das://7d002a64-444b-46f9-8d20-60663741d674/database/postgres/schema/public/table/chats" />
+    <entry file="file://$PROJECT_DIR$/src/main/resources/templates/Chat.ftl">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="397">
-          <caret line="40" column="99" selection-start-line="40" selection-start-column="84" selection-end-line="40" selection-end-column="99" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/templates/SignIn.ftl">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="340">
-          <caret line="32" column="103" lean-forward="true" selection-start-line="32" selection-start-column="103" selection-end-line="32" selection-end-column="103" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/templates/ProfileEdit.ftl">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="466">
-          <caret line="94" column="90" lean-forward="true" selection-start-line="94" selection-start-column="90" selection-end-line="94" selection-end-column="90" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/templates/PostsPage.ftl">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="401">
-          <caret line="68" column="105" lean-forward="true" selection-start-line="68" selection-start-column="105" selection-end-line="68" selection-end-column="105" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/application.properties">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/templates/old" />
-    <entry file="file://$PROJECT_DIR$/src/main/resources/templates/FeedPage.ftl" />
-    <entry file="file://$PROJECT_DIR$/src/main/resources/templates/SearchPage.ftl">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="483">
-          <caret line="54" column="81" lean-forward="true" selection-start-line="54" selection-start-column="81" selection-end-line="54" selection-end-column="81" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/templates/MessagesPage.ftl">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="367">
-          <caret line="84" column="183" selection-start-line="84" selection-start-column="183" selection-end-line="84" selection-end-column="183" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/pr/dto/MessageDto.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="102">
-          <caret line="6" column="25" selection-start-line="6" selection-start-column="25" selection-end-line="6" selection-end-column="25" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/pr/dto/PostsDto.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="102">
-          <caret line="6" column="23" selection-start-line="6" selection-start-column="23" selection-end-line="6" selection-end-column="23" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/pr/dto/UserDto.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="493">
-          <caret line="29" column="47" selection-start-line="29" selection-start-column="47" selection-end-line="29" selection-end-column="47" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/pr/forms/MessageForm.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="238">
-          <caret line="14" column="24" selection-start-line="14" selection-start-column="24" selection-end-line="14" selection-end-column="24" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/pr/forms/PostForm.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="119">
-          <caret line="7" selection-start-line="7" selection-end-line="10" selection-end-column="8" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/pr/forms/SearchForm.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="34">
-          <caret line="2" selection-start-line="2" selection-end-line="2" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/pr/forms/UploadForm.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="68">
-          <caret line="4" column="13" selection-start-line="4" selection-start-column="13" selection-end-line="4" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/pr/forms/UserForm.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="272">
-          <caret line="16" column="24" selection-start-line="16" selection-start-column="24" selection-end-line="16" selection-end-column="24" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/pr/repositories/AvatarRepository.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="476">
-          <caret line="28" column="67" selection-start-line="28" selection-start-column="67" selection-end-line="28" selection-end-column="67" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/pr/repositories/MessageRepository.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="102">
-          <caret line="6" column="25" selection-start-line="6" selection-start-column="25" selection-end-line="6" selection-end-column="25" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/pr/repositories/PostsRepository.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="34">
-          <caret line="2" selection-start-line="2" selection-end-line="2" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/pr/security/config/SecurityConfig.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-265">
-          <caret line="2" column="7" selection-start-line="2" selection-start-column="7" selection-end-line="2" selection-end-column="7" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/pr/security/details/UserDetailsServiceImpl.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="85">
-          <caret line="15" column="13" selection-start-line="15" selection-start-column="13" selection-end-line="15" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/pr/security/details/UserDetailsImpl.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="34">
-          <caret line="2" selection-start-line="2" selection-end-line="2" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/pr/services/AvatarServiceImpl.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="34">
-          <caret line="2" column="37" selection-start-line="2" selection-start-column="37" selection-end-line="2" selection-end-column="37" />
-          <folding>
-            <element signature="e#2073#2074#0" expanded="true" />
-            <element signature="e#2129#2130#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/pr/services/MessageServiceImpl.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="68">
-          <caret line="4" selection-start-line="4" selection-end-line="4" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/static/js/bootstrap.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-35684" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/static/js/npm.js">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/data.sql">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="85">
-          <caret line="5" column="34" lean-forward="true" selection-start-line="5" selection-start-column="34" selection-end-line="5" selection-end-column="34" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/pr/services/UsersServiceImpl.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-605">
-          <caret line="14" column="13" selection-start-line="14" selection-start-column="13" selection-end-line="14" selection-end-column="13" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
+        <state relative-caret-position="745">
+          <caret line="77" column="14" selection-start-line="77" selection-start-column="14" selection-end-line="77" selection-end-column="14" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/pr/services/UsersService.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="136">
-          <caret line="8" column="17" selection-start-line="8" selection-start-column="17" selection-end-line="8" selection-end-column="17" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
+        <state relative-caret-position="442">
+          <caret line="30" selection-start-line="30" selection-end-line="30" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/pr/services/PostsService.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/pr/services/ChatServiceImpl.java" />
+    <entry file="file://$PROJECT_DIR$/src/main/java/pr/repositories/ChatRepository.java" />
+    <entry file="jar://$MAVEN_REPOSITORY$/org/postgresql/postgresql/42.2.4/postgresql-42.2.4.jar!/org/postgresql/core/v3/QueryExecutorImpl.class">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="102">
-          <caret line="6" column="17" selection-start-line="6" selection-start-column="17" selection-end-line="6" selection-end-column="17" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
+        <state relative-caret-position="225">
+          <caret line="1803" selection-start-line="1803" selection-end-line="1803" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/pr/services/MessageService.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/pr/services/ChatService.java" />
+    <entry file="file://$PROJECT_DIR$/src/main/java/pr/services/UsersServiceImpl.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="68">
-          <caret line="4" column="17" selection-start-line="4" selection-start-column="17" selection-end-line="4" selection-end-column="17" />
+        <state relative-caret-position="436">
+          <caret line="121" column="49" lean-forward="true" selection-start-line="121" selection-start-column="49" selection-end-line="121" selection-end-column="49" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/pr/services/AvatarService.java">
+    <entry file="das://7d002a64-444b-46f9-8d20-60663741d674/database/postgres/schema/public/table/follow_users">
+      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
+        <state>
+          <filtering enabled="true" />
+          <column-attributes>
+            <column name="ctid" enabled="false" />
+          </column-attributes>
+        </state>
+      </provider>
+    </entry>
+    <entry file="das://7d002a64-444b-46f9-8d20-60663741d674/database/postgres/schema/public/table/persistent_logins">
+      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
+        <state>
+          <filtering enabled="true" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/templates/UserPage.ftl">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="68">
-          <caret line="7" column="17" selection-start-line="7" selection-start-column="17" selection-end-line="7" selection-end-column="17" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
+        <state relative-caret-position="337">
+          <caret line="107" column="24" selection-start-line="107" selection-start-column="24" selection-end-line="107" selection-end-column="24" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$APPLICATION_CONFIG_DIR$/consoles/db/7d002a64-444b-46f9-8d20-60663741d674/console_1.sql">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret column="44" selection-start-column="44" selection-end-column="44" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="das://7d002a64-444b-46f9-8d20-60663741d674/database/postgres/schema/public/table/service_user">
+      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
+        <state>
+          <filtering enabled="true" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="das://7d002a64-444b-46f9-8d20-60663741d674/database/postgres/schema/public/table/chat_list">
+      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
+        <state>
+          <filtering enabled="true" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$APPLICATION_CONFIG_DIR$/consoles/db/7d002a64-444b-46f9-8d20-60663741d674/console_2.sql">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret column="138" selection-start-column="138" selection-end-column="138" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/templates/Chatold.ftl">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="17">
+          <caret line="68" column="22" lean-forward="true" selection-start-line="68" selection-start-column="22" selection-end-line="68" selection-end-column="22" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/pr/models/User.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="484">
+          <caret line="54" column="22" selection-start-line="54" selection-start-column="22" selection-end-line="54" selection-end-column="22" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/pr/services/AuthenticationServiceImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="425">
+          <caret line="37" column="8" selection-start-line="37" selection-start-column="8" selection-end-line="37" selection-end-column="8" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/pr/services/AuthenticationService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="272">
+          <caret line="22" selection-start-line="22" selection-end-line="22" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$APPLICATION_CONFIG_DIR$/consoles/db/7d002a64-444b-46f9-8d20-60663741d674/console.sql">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret column="8" selection-start-column="8" selection-end-column="8" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/pr/dto/MessageDto.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="374">
+          <caret line="26" column="48" selection-start-line="26" selection-start-column="48" selection-end-line="26" selection-end-column="48" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/pr/repositories/UsersRepository.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="136">
-          <caret line="15" selection-start-line="15" selection-end-line="15" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
+        <state relative-caret-position="493">
+          <caret line="37" selection-start-line="37" selection-end-line="37" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/pr/models/Posts.java">
+    <entry file="file://$PROJECT_DIR$/src/main/resources/templates/SignUp.ftl">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="17">
+          <caret line="1" column="15" selection-start-line="1" selection-end-line="2" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/pr/app/Application.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="85">
+          <caret line="10" selection-start-line="10" selection-end-line="10" selection-end-column="20" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/pr/repositories/AvatarRepository.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="408">
+          <caret line="31" lean-forward="true" selection-start-line="31" selection-end-line="31" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/pr/services/PostsService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="68">
+          <caret line="8" column="17" selection-start-line="8" selection-start-column="17" selection-end-line="8" selection-end-column="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/templates/SignIn.ftl">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/pr/forms/PostForm.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="170">
+          <caret line="13" column="13" selection-start-line="13" selection-start-column="13" selection-end-line="13" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/pr/dto/UserDto.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="510">
+          <caret line="36" column="1" selection-start-line="36" selection-start-column="1" selection-end-line="36" selection-end-column="1" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/pr/dto/PostsDto.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="136">
+          <caret line="17" column="13" selection-start-line="17" selection-start-column="13" selection-end-line="17" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/templates/ProfileEdit.ftl">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/application.properties">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/static/css/chat.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="612">
+          <caret line="57" column="1" selection-start-line="57" selection-start-column="1" selection-end-line="57" selection-end-column="1" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/pr/controllers/GreetingController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="391">
+          <caret line="33" column="28" selection-start-line="33" selection-start-column="28" selection-end-line="33" selection-end-column="28" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pom.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="544">
+          <caret line="32" column="21" selection-start-line="32" selection-start-column="21" selection-end-line="32" selection-end-column="21" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/pr/config/WebSocketConfig.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="306">
-          <caret line="23" column="23" selection-start-line="23" selection-start-column="23" selection-end-line="23" selection-end-column="23" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#572#573#0" expanded="true" />
-            <element signature="e#607#608#0" expanded="true" />
-            <element signature="e#642#643#0" expanded="true" />
-            <element signature="e#679#680#0" expanded="true" />
-          </folding>
+          <caret line="22" column="5" selection-start-line="21" selection-start-column="60" selection-end-line="22" selection-end-column="5" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/pr/models/Avatar.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/pr/chat/Greeting.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="255">
-          <caret line="20" column="19" selection-start-line="20" selection-start-column="19" selection-end-line="20" selection-end-column="19" />
+        <state relative-caret-position="34">
+          <caret line="2" column="13" selection-start-line="2" selection-start-column="13" selection-end-line="2" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/pr/chat/HelloMessage.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="85">
+          <caret line="5" selection-start-line="5" selection-end-line="5" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/pr/services/MessageServiceImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="272">
+          <caret line="30" column="46" selection-start-line="30" selection-start-column="46" selection-end-line="30" selection-end-column="46" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
@@ -1020,127 +1114,103 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/pr/models/Message.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="459">
-          <caret line="32" column="27" selection-start-line="32" selection-start-column="27" selection-end-line="32" selection-end-column="27" />
+        <state relative-caret-position="306">
+          <caret line="23" column="11" selection-start-line="23" selection-start-column="11" selection-end-line="23" selection-end-column="22" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/pr/services/MessageService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="136">
+          <caret line="12" column="10" selection-start-line="12" selection-start-column="10" selection-end-line="12" selection-end-column="10" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/pr/models/User.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/pr/repositories/MessageRepository.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="425">
-          <caret line="32" column="27" selection-start-line="32" selection-start-column="27" selection-end-line="32" selection-end-column="27" />
+        <state relative-caret-position="272">
+          <caret line="22" column="132" selection-start-line="22" selection-start-column="132" selection-end-line="22" selection-end-column="132" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="das://7d002a64-444b-46f9-8d20-60663741d674/database/postgres/schema/public/table/user_messages">
+      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
+        <state>
+          <filtering enabled="true" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/pr/models/Chat.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="408">
+          <caret line="24" lean-forward="true" selection-start-line="24" selection-end-line="24" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="das://f93b4457-f8bc-431e-8167-71f7b2fbf9cd/database/postgres/schema/public/table/persistent_logins">
-      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
-        <state>
-          <filtering enabled="true" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/pr/services/PostsServiceImpl.java">
+    <entry file="file://$PROJECT_DIR$/src/main/resources/templates/PostsPage.ftl">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="476">
-          <caret line="68" column="66" selection-start-line="68" selection-start-column="66" selection-end-line="68" selection-end-column="66" />
+        <state relative-caret-position="538">
+          <caret line="115" column="109" selection-start-line="115" selection-start-column="109" selection-end-line="115" selection-end-column="109" />
           <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/pr/services/AuthenticationService.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="187">
-          <caret line="11" column="19" selection-start-line="11" selection-start-column="19" selection-end-line="11" selection-end-column="19" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/pr/services/AuthenticationServiceImpl.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-44">
-          <caret line="41" column="42" lean-forward="true" selection-start-line="41" selection-start-column="42" selection-end-line="41" selection-end-column="42" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="das://f93b4457-f8bc-431e-8167-71f7b2fbf9cd/database/postgres/schema/public/table/users_avatars/index/users_avatars_user_id_uindex">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="17">
-          <caret line="1" column="20" selection-start-line="1" selection-start-column="20" selection-end-line="1" selection-end-column="20" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="das://f93b4457-f8bc-431e-8167-71f7b2fbf9cd/database/postgres/schema/public/table/users_posts">
-      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
-        <state>
-          <filtering enabled="true" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="das://f93b4457-f8bc-431e-8167-71f7b2fbf9cd/database/postgres/schema/public/table/users_avatars">
-      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
-        <state>
-          <filtering enabled="true" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="das://f93b4457-f8bc-431e-8167-71f7b2fbf9cd/database/postgres/schema/public/table/service_user">
-      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
-        <state>
-          <filtering enabled="true" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="das://f93b4457-f8bc-431e-8167-71f7b2fbf9cd/database/postgres/schema/public/table/user_messages">
-      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
-        <state>
-          <filtering enabled="true" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/pr/app/Application.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="238">
-          <caret line="14" column="13" selection-start-line="14" selection-start-column="13" selection-end-line="14" selection-end-column="13" />
-          <folding>
-            <element signature="imports" expanded="true" />
+            <element signature="n#style#0;n#a#2;n#div#0;n#div#1;n#div#0;n#div#1;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/pr/controllers/UsersController.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="510">
-          <caret line="103" column="108" selection-start-line="103" selection-start-column="108" selection-end-line="103" selection-end-column="108" />
+        <state relative-caret-position="165">
+          <caret line="229" column="15" selection-start-line="229" selection-start-column="15" selection-end-line="229" selection-end-column="15" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/templates/UserPage.ftl">
+    <entry file="file://$PROJECT_DIR$/src/main/java/pr/services/PostsServiceImpl.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="153">
-          <caret line="9" column="45" lean-forward="true" selection-start-line="9" selection-start-column="45" selection-end-line="9" selection-end-column="45" />
+        <state relative-caret-position="-808">
+          <caret line="44" column="55" selection-start-line="44" selection-start-column="44" selection-end-line="44" selection-end-column="55" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/templates/UsersPage.ftl">
+    <entry file="file://$PROJECT_DIR$/src/main/java/pr/repositories/PostsRepository.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="68">
-          <caret line="4" column="20" selection-start-line="4" selection-start-column="20" selection-end-line="4" selection-end-column="20" />
+        <state relative-caret-position="300">
+          <caret line="41" column="74" lean-forward="true" selection-start-line="41" selection-start-column="74" selection-end-line="41" selection-end-column="74" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/templates/Chatnew.ftl">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1479">
+          <caret line="87" column="85" selection-start-line="87" selection-start-column="85" selection-end-line="87" selection-end-column="85" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/static/js/app.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="640">
+          <caret line="77" column="1" selection-start-line="77" selection-start-column="1" selection-end-line="77" selection-end-column="1" />
+          <folding>
+            <element signature="n#style#0;n#td#0;n#tr#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#td#0;n#tr#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#td#0;n#tr#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#td#0;n#tr#0;n#!!top" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/static/js/js.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="589">
+          <caret line="54" column="45" lean-forward="true" selection-start-line="54" selection-start-column="45" selection-end-line="54" selection-end-column="45" />
         </state>
       </provider>
     </entry>

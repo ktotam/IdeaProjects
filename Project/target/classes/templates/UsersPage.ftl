@@ -6,7 +6,7 @@
     <link href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" type="text/css" href="css/style.css"/>
 
-
+    <script type="text/javascript" src="js/js.js"></script>
     <style type="text/css">
         a:hover {
             text-decoration: none;
@@ -22,19 +22,20 @@
 <nav class="navbar navbar-default">
     <div class="container-fluid">
         <div class="navbar-header">
-            <a class="navbar-brand" href="/user">Home</a>
+            <ul class="nav navbar-nav">
+                <li><a href="/user"><big>Home</big></a></li>
+                <li><a href="/msg/"><big>Messages</big></a></li>
+                <li><a href="/feed"><big>Feed</big></a></li>
+            </ul>
         </div>
         <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-            <ul class="nav navbar-nav">
-                <li><a href="/msg/">Messages</a></li>
-            </ul>
             <ul class="nav navbar-nav navbar-right">
-                <li><a href="/logout">Logout</a></li>
+                <li><a href="/logout"><big>Logout</big></a></li>
             </ul>
             <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
                 <form class="navbar-form navbar-right">
                     <div class="form-group">
-                        <input type="text" class="form-control" placeholder="Search posts" name="text">
+                        <input type="text" class="form-control" placeholder="Search posts" name="text" autocomplete="off">
                     </div>
                     <button type="submit" formaction="/search" formmethod="get" class="btn btn-default">Search</button>
                 </form>
@@ -43,37 +44,38 @@
     </div>
 </nav>
 
-<div class="container" id="main">
+<div class="container" style="width: 85%; margin-left: 15%">
     <div class="row">
         <div class="col-md-6 col-sm-6">
+        <#list users as user>
             <div class="panel panel-default">
-                <div class="panel-heading"> <h4>Users</h4></div>
+
+                <div class="panel-heading" ><h3><span><a href="/users/${user.id}"><big>${user.name}</big></a></span></h3></div>
+
                 <div class="panel-body">
-                <#list users as user>
+
                     <div class="well well-sm">
                         <div class="media">
                         <div class="media-body">
-
-
                             <a class="thumbnail pull-left" href="/users/${user.id}">
-                                <img src=${user.avatarUrl}>
+                                <img width="163" height="163" src=${user.avatarUrl}>
                             </a>
                         </div>
                         <div class="media-body">
-                            <h3><span><a href="/users/${user.id}">${user.name}</a></span></h3>
-                            <br>
-                            <h4><span class="label label-info">Age ${user.age}</span></h4>
-                            <br>
-                            <span class="label label-primary"> ID ${user.id}</span>
+                            <p>
+                            <h4><span class="label label-info">Age ${user.age}</span>
+                                <span class="label label-info"> ID ${user.id}</span></h4>
                             <span class="label label-primary">${user.postsCount} Posts</span>
-                            <span class="label label-primary">${user.likes} Likes</span>
+                            <span class="label label-primary">${user.followersCount} Followers</span>
+                            </p>
                         </div>
                         </div>
                     </div>
-                    <hr>
-                </#list>
+
                 </div>
+
             </div>
+        </#list>
         </div>
     </div>
 </div>

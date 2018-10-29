@@ -36,14 +36,6 @@ public class AvatarServiceImpl implements AvatarService {
         avatarRepository.deleteAvatarByUserId(userId);
     }
 
-    @Override
-    public Avatar getAvatarByUserId(Long userId) {
-        Avatar avatar = avatarRepository.findOneByUserId(userId);
-        if (avatar == null) {
-            return avatarRepository.findOneByUserId(0L);
-        }
-        return avatar;
-    }
 
     @Override
     public void writeAvatarToResponse(String filePath, HttpServletResponse response) throws Exception {
@@ -57,11 +49,6 @@ public class AvatarServiceImpl implements AvatarService {
             response.flushBuffer();
 
         }
-    }
-
-    @Override
-    public List<Avatar> getAllAvatars() {
-        return avatarRepository.findAllAvatars();
     }
 
 

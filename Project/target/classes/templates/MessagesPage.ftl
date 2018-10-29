@@ -19,19 +19,20 @@
 <nav class="navbar navbar-default">
     <div class="container-fluid">
         <div class="navbar-header">
-            <a class="navbar-brand" href="/user">Home</a>
+            <ul class="nav navbar-nav">
+                <li><a href="/user"><big>Home</big></a></li>
+                <li><a href="/msg/"><b><big>Messages</big></b></a></li>
+                <li><a href="/feed"><big>Feed</big></a></li>
+            </ul>
         </div>
         <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-            <ul class="nav navbar-nav">
-                <li><a href="/msg/">Messages</a></li>
-            </ul>
             <ul class="nav navbar-nav navbar-right">
-                <li><a href="/logout">Logout</a></li>
+                <li><a href="/logout"><big>Logout</big></a></li>
             </ul>
             <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
                 <form class="navbar-form navbar-right">
                     <div class="form-group">
-                        <input type="text" class="form-control" placeholder="Search posts" name="text">
+                        <input type="text" class="form-control" placeholder="Search posts" name="text" autocomplete="off">
                     </div>
                     <button type="submit" formaction="/search" formmethod="get" class="btn btn-default">Search</button>
                 </form>

@@ -7,14 +7,8 @@ import org.springframework.stereotype.Component;
 import pr.dto.MessageDto;
 import pr.dto.PostsDto;
 import pr.dto.UserDto;
-import pr.models.Avatar;
-import pr.models.Message;
-import pr.models.Posts;
-import pr.models.User;
-import pr.repositories.AvatarRepository;
-import pr.repositories.MessageRepository;
-import pr.repositories.PostsRepository;
-import pr.repositories.UsersRepository;
+import pr.models.*;
+import pr.repositories.*;
 import pr.security.details.UserDetailsImpl;
 
 import java.util.ArrayList;
@@ -41,16 +35,21 @@ public class AuthenticationServiceImpl implements AuthenticationService {
     @Override
     public List<PostsDto> getUserPostsByAuthentication(Authentication authentication) {
         UserDetailsImpl userDetails = (UserDetailsImpl) authentication.getPrincipal();
+        List<Posts> reposts = postsRepository.findReposts(userDetails.getId());
 
-        List<Posts> posts = postsRepository.findPostsByUserId(userDetails.getId());
 
-        List<PostsDto> postsDtos = new ArrayList<>();
-        for (Posts tempPost : posts) {
+       List<PostsDto> postsDtos = new ArrayList<>();
+
+        for (Posts tempPost : reposts) {
             postsDtos.add(PostsDto.builder()
                     .id(tempPost.getId())
                     .post(tempPost.getPost())
                     .userId(tempPost.getUserId())
                     .likes(tempPost.getLikes())
+                    .date(tempPost.getDate())
+                    .avatarUrl(tempPost.getAvatarUrl())
+                    .userName(tempPost.getUserName())
+                    .userId(tempPost.getUserId())
                     .build());
         }
         return postsDtos;
@@ -80,7 +79,7 @@ public class AuthenticationServiceImpl implements AuthenticationService {
     @Override
     public UserDto getUserByAuthentication(Authentication authentication) {
         UserDetailsImpl userDetails = (UserDetailsImpl) authentication.getPrincipal();
-        User user = usersRepository.findById(userDetails.getId());
+        User user = usersRepository.findById(userDetails.getId()).orElse(null);
         return UserDto.from(user);
     }
 
@@ -95,43 +94,10 @@ public class AuthenticationServiceImpl implements AuthenticationService {
     }
 
     @Override
-    public List<MessageDto> getInboxMessagesByAuthentication(Authentication authentication) {
+    public List<User> getChatListByAuthentication(Authentication authentication) {
         UserDetailsImpl userDetails = (UserDetailsImpl) authentication.getPrincipal();
-
-        List<Message> messages = messageRepository.findAllByToIdOrderByIdDesc(userDetails.getId());
-
-        List<MessageDto> messageDtos = new ArrayList<>();
-        for (Message tempMessage : messages) {
-            messageDtos.add(MessageDto.builder()
-                    .id(tempMessage.getId())
-                    .text(tempMessage.getText())
-                    .fromId(tempMessage.getFromId())
-                    .toId(tempMessage.getToId())
-                    .toUserName(tempMessage.getToUserName())
-                    .fromUserName(tempMessage.getFromUserName())
-                    .build());
-        }
-        return messageDtos;
-    }
-
-    @Override
-    public List<MessageDto> getSentMessagesByAuthentication(Authentication authentication) {
-        UserDetailsImpl userDetails = (UserDetailsImpl) authentication.getPrincipal();
-
-        List<Message> messages = messageRepository.findAllByFromIdOrderById(userDetails.getId());
-
-        List<MessageDto> messageDtos = new ArrayList<>();
-        for (Message tempMessage : messages) {
-            messageDtos.add(MessageDto.builder()
-                    .id(tempMessage.getId())
-                    .text(tempMessage.getText())
-                    .fromId(tempMessage.getFromId())
-                    .toId(tempMessage.getToId())
-                    .toUserName(tempMessage.getToUserName())
-                    .fromUserName(tempMessage.getFromUserName())
-                    .build());
-        }
-        return messageDtos;
+        List<User> chatList = usersRepository.getChatListByUserId(userDetails.getId());
+        return chatList;
     }
 
 

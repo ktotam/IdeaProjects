@@ -14,14 +14,18 @@ public class UserDetailsImpl implements UserDetails {
     private Integer age;
     private String name;
     private int followers;
+    private String avatarUrl;
+
 
     public UserDetailsImpl (User user) {
         this.login = user.getLogin();
         this.hashPassword = user.getHashPassword();
         this.id = user.getId();
         this.age = user.getAge();
-        this.followers = user.getLikes();
         this.name = user.getName();
+        this.avatarUrl = user.getAvatarUrl();
+        this.followers = user.getFollowersCount();
+
     }
     @Override
     public Collection<? extends GrantedAuthority> getAuthorities() {
