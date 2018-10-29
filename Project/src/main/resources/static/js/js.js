@@ -45,6 +45,7 @@ function show(userId)
     req = new XMLHttpRequest();
     req.open('POST', '/chat/' + userId, true);
     req.send();
+    window.location.href = "https://app-sn.herokuapp.com/chat";
 }
 function follow(toId, follow, unfollow) {
     var div = document.getElementById(follow);
