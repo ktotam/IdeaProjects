@@ -50,14 +50,14 @@
         <#list users as user>
             <div class="panel panel-default">
 
-                <div class="panel-heading" ><h3><span><a href="/users/${user.id}"><big>${user.name}</big></a></span></h3></div>
+                <div class="panel-heading" ><h3><span><a href="/user${user.id}"><big>${user.name}</big></a></span></h3></div>
 
                 <div class="panel-body">
 
                     <div class="well well-sm">
                         <div class="media">
                         <div class="media-body">
-                            <a class="thumbnail pull-left" href="/users/${user.id}">
+                            <a class="thumbnail pull-left" href="/user${user.id}">
                                 <img width="163" height="163" src=${user.avatarUrl}>
                             </a>
                         </div>
