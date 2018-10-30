@@ -17,6 +17,8 @@ import pr.models.User;
 import pr.services.*;
 import org.json.simple.JSONObject;
 
+import javax.servlet.ServletOutputStream;
+import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import java.io.File;
 import java.io.IOException;
@@ -64,7 +66,10 @@ public class UsersController {
     }
 
     @GetMapping("/allusers")
-    public String getUsersPage(ModelMap users) {
+    public String getUsersPage(Authentication authentication, ModelMap users) {
+        if (authentication == null) {
+            return "redirect:/signIn";
+        }
         List<UserDto> allUsers = usersService.getAllUsers();
         users.addAttribute("users", allUsers);
 
@@ -90,7 +95,9 @@ public class UsersController {
     @GetMapping("/users/{user-id}")
     public String getPage(Authentication authentication, @PathVariable("user-id") Long userId,
                           ModelMap isFollowed, ModelMap posts, ModelMap user, ModelMap selfId, ModelMap usersPostsLikes) {
-
+        if (authentication == null) {
+            return "redirect:/signIn";
+        }
         if(userId.equals(authenticationService.getUserIdByAuthentication(authentication))) {
             return "redirect:/user";
         }
@@ -121,6 +128,9 @@ public class UsersController {
     @GetMapping("/search")
     public String search(ModelMap user, ModelMap posts, ModelMap usersPostsLikes, ModelMap popularPosts, ModelMap popularUsers, ModelMap searchText,
                          SearchForm text, Authentication authentication) {
+        if (authentication == null) {
+            return "redirect:/signIn";
+        }
         user.addAttribute("user", authenticationService.getUserByAuthentication(authentication));
         usersPostsLikes.addAttribute("likedPosts", postsService.getUsersPostsLikes(authenticationService.getUserIdByAuthentication(authentication)));
         searchText.addAttribute("text", text.getText());
@@ -133,7 +143,9 @@ public class UsersController {
     @GetMapping("/feed")
     public String feedPage(ModelMap user, ModelMap posts, ModelMap usersPostsLikes, ModelMap popularPosts, ModelMap popularUsers,
                            Authentication authentication) {
-
+        if (authentication == null) {
+            return "redirect:/signIn";
+        }
         user.addAttribute("user", authenticationService.getUserByAuthentication(authentication));
         usersPostsLikes.addAttribute("likedPosts", postsService.getUsersPostsLikes(authenticationService.getUserIdByAuthentication(authentication)));
         posts.addAttribute("posts", postsService.getFeedPosts(authenticationService.getUserIdByAuthentication(authentication)));
@@ -151,7 +163,10 @@ public class UsersController {
     }
 
     @GetMapping("/edit")
-    public String editProfile() {
+    public String editProfile(Authentication authentication) {
+        if (authentication == null) {
+            return "redirect:/signIn";
+        }
         return "ProfileEdit";
     }
 
@@ -173,7 +188,9 @@ public class UsersController {
     }
 
     @PostMapping("/upload")
-    public String avatarUpload(@ModelAttribute UploadForm form, Authentication authentication) {
+    public String avatarUpload(@ModelAttribute UploadForm form, Authentication authentication, HttpServletRequest request) {
+
+        String serverUrl = request.getProtocol().substring(0, request.getProtocol().indexOf("/")) + "://" + request.getServerName() + ":" + request.getServerPort() + "/";
 
         MultipartFile file = form.getFile();
         String type = file.getContentType();
@@ -194,10 +211,10 @@ public class UsersController {
             avatarService.saveAvatar(login + "_avatar.png",
                     storagePath + login + "_avatar.png",
                     type,
-                    "http://localhost:8082/files/" + login + "_avatar.png",
+                    serverUrl + "files/" + login + "_avatar.png",
                     authenticationService.getUserIdByAuthentication(authentication));
 
-            usersService.addAvatarUrl("http://localhost:8082/files/" + login + "_avatar.png",
+            usersService.addAvatarUrl(serverUrl + "files/" + login + "_avatar.png",
                     authenticationService.getUserIdByAuthentication(authentication));
         } catch (IOException e) {
             e.printStackTrace();
@@ -260,10 +277,5 @@ public class UsersController {
     public String createChat(Authentication authentication, @PathVariable("user-id") Long user2) {
         usersService.createChat(authenticationService.getUserIdByAuthentication(authentication), user2);
         return "redirect:/chat";
-    }
-    @GetMapping("/chatold")
-    public String chatold(Authentication authentication, ModelMap chatList, ModelMap user) {
-        user.addAttribute("user", authenticationService.getUserByAuthentication(authentication));
-        return "Chatold";
     }
 }

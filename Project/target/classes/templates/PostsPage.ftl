@@ -75,18 +75,6 @@
                     </div>
                 </div>
             </div>
-            <div id="methodCaesar" style="display:none">
-            <div class="panel panel-default">
-                <div class="panel-heading"><h3>Send Message</h3></div>
-                <form class="form-horizontal" role="form" method="post" action="/msgto/${user.id}">
-                    <div class="panel-body" style="padding:14px;">
-                        <textarea class="form-control" placeholder="Your message" maxlength="255" name="text"></textarea>
-                        <br>
-                        <button class="btn btn-default pull-right" type="submit">Send</button>
-                    </div>
-                </form>
-            </div>
-            </div>
         </div>
         <div class="col-md-8 col-sm-6">
                         <#list posts as post>

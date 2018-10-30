@@ -54,8 +54,8 @@
       <ObjectId>2200</ObjectId>
       <Comment>standard public schema</Comment>
       <Owner>postgres</Owner>
-      <IntrospectionTimestamp>2018-09-28.17:46:06.849</IntrospectionTimestamp>
-      <IntrospectionStateNumber>1386</IntrospectionStateNumber>
+      <IntrospectionTimestamp>2018-10-29.15:32:32.591</IntrospectionTimestamp>
+      <IntrospectionStateNumber>1754</IntrospectionStateNumber>
       <Current>1</Current>
       <Visible>1</Visible>
     </schema>
@@ -101,30 +101,22 @@
       <HandlerId>335</HandlerId>
       <Type>index</Type>
     </access-method>
-    <sequence id="17" parent="10" name="hibernate_sequence">
+    <sequence id="17" parent="10" name="chat_list_id_seq">
+      <ObjectId>18210</ObjectId>
+      <Owner>postgres</Owner>
+      <StateNumber>1740</StateNumber>
+      <SequenceIdentity>1</SequenceIdentity>
+      <BelongsToColumn>1</BelongsToColumn>
+      <CacheSize>1</CacheSize>
+    </sequence>
+    <sequence id="18" parent="10" name="hibernate_sequence">
       <ObjectId>17851</ObjectId>
       <Owner>postgres</Owner>
       <StateNumber>1030</StateNumber>
       <SequenceIdentity>1</SequenceIdentity>
       <CacheSize>1</CacheSize>
     </sequence>
-    <sequence id="18" parent="10" name="user_messages_id_seq">
-      <ObjectId>18197</ObjectId>
-      <Owner>postgres</Owner>
-      <StateNumber>1385</StateNumber>
-      <SequenceIdentity>1</SequenceIdentity>
-      <BelongsToColumn>1</BelongsToColumn>
-      <CacheSize>1</CacheSize>
-    </sequence>
-    <sequence id="19" parent="10" name="chat_list_id_seq">
-      <ObjectId>18159</ObjectId>
-      <Owner>postgres</Owner>
-      <StateNumber>1333</StateNumber>
-      <SequenceIdentity>1</SequenceIdentity>
-      <BelongsToColumn>1</BelongsToColumn>
-      <CacheSize>1</CacheSize>
-    </sequence>
-    <sequence id="20" parent="10" name="persistent_logins_id_seq">
+    <sequence id="19" parent="10" name="persistent_logins_id_seq">
       <ObjectId>18001</ObjectId>
       <Owner>postgres</Owner>
       <StateNumber>1084</StateNumber>
@@ -132,10 +124,18 @@
       <BelongsToColumn>1</BelongsToColumn>
       <CacheSize>1</CacheSize>
     </sequence>
-    <sequence id="21" parent="10" name="service_user_id_seq">
+    <sequence id="20" parent="10" name="service_user_id_seq">
       <ObjectId>18018</ObjectId>
       <Owner>postgres</Owner>
       <StateNumber>1087</StateNumber>
+      <SequenceIdentity>1</SequenceIdentity>
+      <BelongsToColumn>1</BelongsToColumn>
+      <CacheSize>1</CacheSize>
+    </sequence>
+    <sequence id="21" parent="10" name="user_messages_id_seq">
+      <ObjectId>18197</ObjectId>
+      <Owner>postgres</Owner>
+      <StateNumber>1385</StateNumber>
       <SequenceIdentity>1</SequenceIdentity>
       <BelongsToColumn>1</BelongsToColumn>
       <CacheSize>1</CacheSize>
@@ -157,9 +157,9 @@
       <CacheSize>1</CacheSize>
     </sequence>
     <table id="24" parent="10" name="chat_list">
-      <ObjectId>18161</ObjectId>
+      <ObjectId>18212</ObjectId>
       <Owner>postgres</Owner>
-      <StateNumber>1365</StateNumber>
+      <StateNumber>1754</StateNumber>
     </table>
     <table id="25" parent="10" name="follow_users">
       <ObjectId>17998</ObjectId>
@@ -184,7 +184,7 @@
     <table id="29" parent="10" name="service_user">
       <ObjectId>18020</ObjectId>
       <Owner>postgres</Owner>
-      <StateNumber>1386</StateNumber>
+      <StateNumber>1754</StateNumber>
     </table>
     <table id="30" parent="10" name="user_messages">
       <ObjectId>18199</ObjectId>
@@ -205,7 +205,7 @@
       <Position>1</Position>
       <DataType>bigint|0s</DataType>
       <NotNull>1</NotNull>
-      <StateNumber>1333</StateNumber>
+      <StateNumber>1740</StateNumber>
       <DefaultExpression>nextval(&apos;chat_list_id_seq&apos;::regclass)</DefaultExpression>
       <TypeId>20</TypeId>
       <SequenceName>chat_list_id_seq</SequenceName>
@@ -213,47 +213,43 @@
     <column id="34" parent="24" name="user1">
       <Position>2</Position>
       <DataType>bigint|0s</DataType>
-      <StateNumber>1333</StateNumber>
+      <StateNumber>1740</StateNumber>
       <TypeId>20</TypeId>
     </column>
     <column id="35" parent="24" name="user2">
       <Position>3</Position>
       <DataType>bigint|0s</DataType>
-      <StateNumber>1333</StateNumber>
+      <StateNumber>1740</StateNumber>
       <TypeId>20</TypeId>
     </column>
     <index id="36" parent="24" name="chat_list_pkey">
-      <ObjectId>18165</ObjectId>
+      <ObjectId>18216</ObjectId>
       <ColNames>id</ColNames>
       <Unique>1</Unique>
     </index>
     <key id="37" parent="24" name="chat_list_pkey">
-      <ObjectId>18166</ObjectId>
+      <ObjectId>18217</ObjectId>
       <ColNames>id</ColNames>
       <UnderlyingIndexName>chat_list_pkey</UnderlyingIndexName>
       <Primary>1</Primary>
     </key>
     <foreign-key id="38" parent="24" name="fkrliu93xyhb9g7d6ipce5o02ue">
-      <ObjectId>18187</ObjectId>
+      <ObjectId>18223</ObjectId>
       <ColNames>user1</ColNames>
       <RefTableId>18020</RefTableId>
       <RefColPositions>1</RefColPositions>
       <RefTableName>service_user</RefTableName>
       <RefKeyName>service_user_pkey</RefKeyName>
       <RefColNames>id</RefColNames>
-      <OnDelete>cascade</OnDelete>
-      <OnUpdate>cascade</OnUpdate>
     </foreign-key>
     <foreign-key id="39" parent="24" name="fk2aya3yv1nr5i5vjsv2c824500">
-      <ObjectId>18192</ObjectId>
+      <ObjectId>18229</ObjectId>
       <ColNames>user2</ColNames>
-      <RefTableId>18161</RefTableId>
+      <RefTableId>18020</RefTableId>
       <RefColPositions>1</RefColPositions>
-      <RefTableName>chat_list</RefTableName>
-      <RefKeyName>chat_list_pkey</RefKeyName>
+      <RefTableName>service_user</RefTableName>
+      <RefKeyName>service_user_pkey</RefKeyName>
       <RefColNames>id</RefColNames>
-      <OnDelete>cascade</OnDelete>
-      <OnUpdate>cascade</OnUpdate>
     </foreign-key>
     <column id="40" parent="25" name="from_id">
       <Position>1</Position>
