@@ -97,7 +97,10 @@ public class UsersController {
             return "redirect:/user";
         }
 
-        System.out.println(request.getProtocol());
+        System.out.println();
+        System.out.println(request.getProtocol() + " ------------------------------------------------------------------");
+        System.out.println();
+
         selfId.addAttribute("selfId", authenticationService.getUserIdByAuthentication(authentication));
 
         List<Long> likes = postsService.getUsersPostsLikes(authenticationService.getUserIdByAuthentication(authentication));
@@ -209,11 +212,10 @@ public class UsersController {
 
             avatarService.saveAvatar(login + "_avatar.png",
                     storagePath + login + "_avatar.png",
-                    type,
-                    serverUrl + "files/" + login + "_avatar.png",
+                    type, "files/" + login + "_avatar.png",
                     authenticationService.getUserIdByAuthentication(authentication));
 
-            usersService.addAvatarUrl(serverUrl + "files/" + login + "_avatar.png",
+            usersService.addAvatarUrl("files/" + login + "_avatar.png",
                     authenticationService.getUserIdByAuthentication(authentication));
         } catch (IOException e) {
             e.printStackTrace();
