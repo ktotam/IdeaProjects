@@ -93,7 +93,7 @@ public class UsersController {
     }
 
     @GetMapping("/users/{user-id}")
-    public String getPage(Authentication authentication, @PathVariable("user-id") Long userId,
+    public String getPage(Authentication authentication, @PathVariable("user-id") Long userId, HttpServletRequest request,
                           ModelMap isFollowed, ModelMap posts, ModelMap user, ModelMap selfId, ModelMap usersPostsLikes) {
         if (authentication == null) {
             return "redirect:/signIn";
@@ -111,6 +111,8 @@ public class UsersController {
         posts.addAttribute("posts", tempPosts);
 
         User tempUser = usersService.getOneById(userId);
+        tempUser.setAvatarUrl(request.getProtocol().substring(0, request.getProtocol().indexOf("/")) + "://" +
+                request.getServerName() + ":" + request.getServerPort() + "/" + tempUser.getAvatarUrl());
         user.addAttribute("user", tempUser);
 
         Boolean follow = usersService.checkFollow((authenticationService.getUserIdByAuthentication(authentication)), userId);
@@ -190,7 +192,8 @@ public class UsersController {
     @PostMapping("/upload")
     public String avatarUpload(@ModelAttribute UploadForm form, Authentication authentication, HttpServletRequest request) {
 
-        String serverUrl = request.getProtocol().substring(0, request.getProtocol().indexOf("/")) + "://" + request.getServerName() + ":" + request.getServerPort() + "/";
+        String serverUrl = request.getProtocol().substring(0, request.getProtocol().indexOf("/")) + "://" +
+                request.getServerName() + ":" + request.getServerPort() + "/";
 
         MultipartFile file = form.getFile();
         String type = file.getContentType();
@@ -222,26 +225,7 @@ public class UsersController {
 
         return "redirect:/user";
     }
-/*
-    @PostMapping("/msg")
-    public String sendMessage(Authentication authentication, MessageForm messageForm) {
-        messageService.newMessage(messageForm, authenticationService.getUserIdByAuthentication(authentication), authenticationService.getNameByAuthentication(authentication));
-        return "redirect:/msg/";
-    }
 
-     @GetMapping("/msg/")
-    public String messagesPage(Authentication authentication, ModelMap inboxMessages, ModelMap sentMessages) {
-        if (authentication == null) {
-            return "redirect:/signIn";
-        }
-        else {
-            inboxMessages.addAttribute("inboxMessages", authenticationService.getInboxMessagesByAuthentication(authentication));
-            sentMessages.addAttribute("sentMessages", authenticationService.getSentMessagesByAuthentication(authentication));
-            return "MessagesPage";
-        }
-    }
-
-*/
     @PostMapping("/msg+{to-id}+{from-id}")
     @ResponseBody
     public String getMessages(@PathVariable("to-id") Long toId, @PathVariable("from-id") Long fromId) {
