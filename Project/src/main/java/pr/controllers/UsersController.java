@@ -97,10 +97,6 @@ public class UsersController {
             return "redirect:/user";
         }
 
-        System.out.println();
-        System.out.println(request.getProtocol() + " ------------------------------------------------------------------");
-        System.out.println();
-
         selfId.addAttribute("selfId", authenticationService.getUserIdByAuthentication(authentication));
 
         List<Long> likes = postsService.getUsersPostsLikes(authenticationService.getUserIdByAuthentication(authentication));
@@ -110,8 +106,8 @@ public class UsersController {
         posts.addAttribute("posts", tempPosts);
 
         User tempUser = usersService.getOneById(userId);
-        tempUser.setAvatarUrl(request.getProtocol().substring(0, request.getProtocol().indexOf("/")) + "://" +
-                request.getServerName() + ":" + request.getServerPort() + "/" + tempUser.getAvatarUrl());
+//        tempUser.setAvatarUrl(request.getProtocol().substring(0, request.getProtocol().indexOf("/")) + "://" +
+  //              request.getServerName() + ":" + request.getServerPort() + "/" + tempUser.getAvatarUrl());
         user.addAttribute("user", tempUser);
 
         Boolean follow = usersService.checkFollow((authenticationService.getUserIdByAuthentication(authentication)), userId);
