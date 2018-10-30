@@ -2,10 +2,7 @@
 <html>
 <head>
     <meta charset="UTF-8">
-    <script
-            src="https://code.jquery.com/jquery-3.3.1.min.js"
-            integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
-            crossorigin="anonymous"></script>
+
     <script src="/js/fileUpload.js"></script>
     <title>Profile</title>
     <link href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" rel="stylesheet">
@@ -26,7 +23,7 @@
         <div class="navbar-header">
             <ul class="nav navbar-nav">
                 <li><a href="/user"><big>Home</big></a></li>
-                <li><a href="/msg/"><big>Messages</big></a></li>
+                <li><a href="/chat"><big>Chat</big></a></li>
                 <li><a href="/feed"><big>Feed</big></a></li>
             </ul>
         </div>

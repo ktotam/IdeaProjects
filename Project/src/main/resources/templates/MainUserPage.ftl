@@ -7,10 +7,6 @@
     <link rel="stylesheet" type="text/css" href="css/style.css"/>
 
     <script type="text/javascript" src="js/js.js"></script>
-    <script src="/webjars/jquery/jquery.min.js"></script>
-    <script src="/webjars/sockjs-client/sockjs.min.js"></script>
-    <script src="/webjars/stomp-websocket/stomp.min.js"></script>
-    <script src="/js/app.js"></script>
 
     <style type="text/css">
         body {
@@ -20,13 +16,11 @@
 
 </head>
 <body>
-123
 <nav class="navbar navbar-default">
     <div class="container-fluid">
         <div class="navbar-header">
             <ul class="nav navbar-nav">
                 <li><a href="/user"><b><big>Home</big></b></a></li>
-                <li><a href="/msg/"><big>Messages</big></a></li>
                 <li><a href="/feed"><big>Feed</big></a></li>
                 <li><a href="/chat"><big>Chat</big></a></li>
             </ul>
@@ -60,7 +54,7 @@
                         <div class="media-body">
                             <p>
                             <h4><span class="label label-info">Age ${user.age}</span>
-                                <span class="label label-info"> ID ${user.id}</span></h4>
+                            <span class="label label-info"> ID ${user.id}</span></h4>
                             <span class="label label-primary">${user.postsCount} Posts</span>
                             <span class="label label-primary">${user.followersCount} Followers</span>
                             </p>
@@ -73,7 +67,9 @@
                 <div class="panel-heading"><a href="/search?text=" class="pull-right">All Posts</a><h4>Popular posts</h4></div>
                 <div class="panel-body">
                     <div class="list-group">
-
+                        <#list popularPosts as popularPost>
+                            <a href="/users/${popularPost.userId}" class="list-group-item">${popularPost.post}</a>
+                        </#list>
                     </div>
                 </div>
             </div>
@@ -82,45 +78,56 @@
                 <div class="panel-heading"><a href="/allusers" class="pull-right">All Users</a><h4>Popular users</h4></div>
                 <div class="panel-body">
                     <div class="list-group">
-
+                        <#list popularUsers as popularUser>
+                        <a href="/users/${popularUser.id}" class="list-group-item">${popularUser.name}</a>
+                        </#list>
                     </div>
                 </div>
             </div>
 
         </div>
-        <div id="main-content" class="container">
-            <div class="row">
-                <div class="col-md-6">
-                    <form class="form-inline">
-                        <div class="form-group">
-                            <label for="connect">WebSocket connection:</label>
-                            <button id="connect" class="btn btn-default" type="submit" onsubmit="connect()">Connect</button>
+        <div class="col-md-8 col-sm-6">
+            <div class="panel panel-default">
+                <div class="panel-heading" style="max-height: 70px">
+                    
+                    <form class="form" action="newPost" method="post">
+                        <div class="input-group text-center">
+                            <input class="form-control input-lg" placeholder="New post?" name="text" maxlength="255" autocomplete="off">
+                            <span class="input-group-btn"><button class="btn btn-lg btn-primary" type="submit">SUBMIT</button></span>
                         </div>
                     </form>
                 </div>
-                <div class="col-md-6">
-                    <form class="form-inline">
-                        <div class="form-group">
-                            <label for="name">Message</label>
-                            <input type="text" id="name" class="form-control" placeholder="Message">
-                        </div>
-                        <button id="send" class="btn btn-default" type="submit" onsubmit="sendMessage()">Send</button>
-                    </form>
-                </div>
             </div>
-            <div class="row">
-                <div class="col-md-12">
-                    <table id="conversation" class="table table-striped">
-                        <thead>
-                        <tr>
-                            <th>Chat</th>
-                        </tr>
-                        </thead>
-                        <tbody id="greetings">
-                        </tbody>
-                    </table>
+            <#list posts as post>
+            <div class="panel panel-default" >
+
+                <div class="panel-heading" style="min-height: 70px">
+                    <a class="pull-left" href="/users/${post.userId}">
+                        <img class="img-circle" width="45" src=${post.getAvatarUrl()}/>
+                    </a>
+                    <div class="pull-left">
+                        <a href="/users/${post.getUserId()}" style="text-decoration: none; cursor: pointer"><b>&nbsp<big>${post.getUserName()}</big></b></a>
+                        <br>
+                        <span class="text-muted">&nbsp<small>${post.date.toLocalDate()} ${post.date.toLocalTime()} <#if post.userId != user.id>(Repost)</#if></small></span>
+                    </div>
                 </div>
+                <div class="panel-body">
+                    <p class="h3">${post.post}</p>
+                    <hr>
+                    <div style="max-width: 1px;">
+                        <#if likedPosts?seq_contains(post.id)>
+                            <a style="text-decoration: none; cursor: pointer; font-size: larger" onclick="dislike('like_${post.id}', ${post.id}, ${post.likes})" title="Like">
+                                <h3><span id="like_${post.id}" class="glyphicon glyphicon-heart">${post.likes}</span></a>
+                        <#else>
+                            <a style="text-decoration: none; cursor: pointer; font-size: larger" onclick="like('like_${post.id}', ${post.id}, ${post.likes})" title="Like">
+                                <h3><span id="like_${post.id}" class="glyphicon glyphicon-heart-empty">${post.likes}</span></a>
+                        </#if>
+                    </div>
+                </div>
+                
+
             </div>
+            </#list>
         </div>
     </div>
 </div>

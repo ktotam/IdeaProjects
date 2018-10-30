@@ -60,9 +60,10 @@ function disconnect() {
 }
 
 function sendName(toId, userId) {
-    stompClient.send("/app/hello", {}, JSON.stringify({'name': $("#name").val() + "№" + toId + "|" + userId}));
-    document.getElementById('name').value = '';
-
+    if ($("#name").val() != "") {
+        stompClient.send("/app/hello", {}, JSON.stringify({'name': $("#name").val() + "№" + toId + "|" + userId}));
+        document.getElementById('name').value = '';
+    }
 }
 
 function showGreeting(message, userId, chatUserId) {

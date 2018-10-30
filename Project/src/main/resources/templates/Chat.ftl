@@ -2,7 +2,7 @@
 <html>
 <head>
     <meta charset="UTF-8">
-    <title>${user.name}</title>
+    <title>Chat</title>
     <link href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" type="text/css" href="css/chat.css"/>
 
@@ -11,7 +11,7 @@
     <script src="/webjars/sockjs-client/sockjs.min.js"></script>
     <script src="/webjars/stomp-websocket/stomp.min.js"></script>
     <script src="/js/app.js"></script>
-
+    <script src="/js/js.js"></script>
     <style type="text/css">
         body {
             background-color: #E9F2F7;
@@ -24,10 +24,9 @@
     <div class="container-fluid">
         <div class="navbar-header">
             <ul class="nav navbar-nav">
-                <li><a href="/user"><b><big>Home</big></b></a></li>
-                <li><a href="/msg/"><big>Messages</big></a></li>
+                <li><a href="/user"><big>Home</big></a></li>
                 <li><a href="/feed"><big>Feed</big></a></li>
-                <li><a href="/chat"><big>Chat</big></a></li>
+                <li><a href="/chat"><b><big>Chat</big></b></a></li>
             </ul>
         </div>
         <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
@@ -48,102 +47,65 @@
 
 <div class="container" id="main">
     <div class="row">
-        <div class="col-md-3 panel panel-default ">
+        <div class="col-md-3" >
+            <div class="panel panel-default ">
                 <div class=" panel-heading">
 
-                        <input type="text" class="form-control" placeholder="Search user" maxlength="255" autocomplete="off"/>
-                        <span class="input-group-btn "><button class="btn" type="submit"><span style="font-size: 1.5em" class="glyphicon glyphicon-search glyphicon-"></span></button></span>
+                    <input id="chatSearch" type="text" class="form-control" placeholder="Search user" maxlength="255" autocomplete="off"/>
                 </div>
-                <div class="panel member_list">
+                <div class="panel member_list" style="height: 654px">
                     <ul class="list-unstyled">
-
-
-                        <li class="left clearfix">
-                     <span class="chat-img pull-left">
-                     <img src="https://lh6.googleusercontent.com/-y-MY2satK-E/AAAAAAAAAAI/AAAAAAAAAJU/ER_hFddBheQ/photo.jpg" alt="User Avatar" class="img-circle">
-                     </span>
-                            <div class="chat-body clearfix">
-                                <div class="header_sec">
-                                    <strong class="primary-font">Jack Sparrow</strong> <strong class="pull-right">
-                                    09:45AM</strong>
-                                </div>
-                                <div class="contact_sec">
-                                    <strong class="primary-font">(123) 123-456</strong> <span class="badge pull-right">3</span>
-                                </div>
+                    <#list chatListUsers as chatUser>
+                    <li id="${chatUser.getName()}" class="left clearfix" style="cursor: pointer; display: ''" onclick="connect(${chatUser.getId()}, ${user.getId()}, '${chatUser.getName()}', '${chatUser.getAvatarUrl()}')">
+                        <span class="chat-img pull-left">
+                            <img src="${chatUser.getAvatarUrl()}" alt="User Avatar" class="img-circle">
+                        </span>
+                        <div class="chat-body clearfix">
+                            <div class="header_sec">
+                                <strong class="primary-font">${chatUser.getName()}</strong> <strong class="pull-right">
+                                ${chatUser.getId()}   </strong>
                             </div>
-                        </li>
-
+                            <div class="contact_sec">
+                                <strong class="primary-font">(123) 123-456</strong> <span class="badge pull-right">${chatUser.getId()}</span>
+                            </div>
+                        </div>
+                    </li>
+                    </#list>
                     </ul>
+
                 </div>
+            </div>
         </div>
 
 
-        <div class="col-md-8 message_section panel panel-default pull-right">
+        <div class="col-md-9">
+            <div class="message_section panel panel-default" >
+                <div class="panel panel-body" >
+                    <div class="chat_area" >
+                        <table id="conversation" class="table table-striped">
+                            <thead>
+                            <tr>
+                                <th><b id="chatName" style = "font-size: 30">Chat</b><img id="avatarUrl" src='' class="pull-right img-circle" style="height: 50px; display: none"></th>
+                            </tr>
+                            </thead>
+                            <tbody id="greetings">
 
-                <div class="chat_area">
-                    <ul class="list-unstyled">
-                        <li class="left clearfix">
-                     <span class="chat-img1 pull-left">
-                     <img src="https://lh6.googleusercontent.com/-y-MY2satK-E/AAAAAAAAAAI/AAAAAAAAAJU/ER_hFddBheQ/photo.jpg" alt="User Avatar" class="img-circle">
-                     </span>
-                            <div class="chat-body1 clearfix">
-                                <p>Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old. Richard McClintock, a Latin professor at Hampden-Sydney College in Virginia.</p>
-                                <div class="chat_time pull-right">09:40PM</div>
-                            </div>
-                        </li>
-                        <li class="left clearfix">
-                     <span class="chat-img1 pull-left">
-                     <img src="https://lh6.googleusercontent.com/-y-MY2satK-E/AAAAAAAAAAI/AAAAAAAAAJU/ER_hFddBheQ/photo.jpg" alt="User Avatar" class="img-circle">
-                     </span>
-                            <div class="chat-body1 clearfix">
-                                <p>Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old. Richard McClintock, a Latin professor at Hampden-Sydney College in Virginia.</p>
-                                <div class="chat_time pull-right">09:40PM</div>
-                            </div>
-                        </li>
-                        <li class="left clearfix">
-                     <span class="chat-img1 pull-left">
-                     <img src="https://lh6.googleusercontent.com/-y-MY2satK-E/AAAAAAAAAAI/AAAAAAAAAJU/ER_hFddBheQ/photo.jpg" alt="User Avatar" class="img-circle">
-                     </span>
-                            <div class="chat-body1 clearfix">
-                                <p>Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old. Richard McClintock, a Latin professor at Hampden-Sydney College in Virginia.</p>
-                                <div class="chat_time pull-right">09:40PM</div>
-                            </div>
-                        </li>
-                        <li class="left clearfix admin_chat">
-                     <span class="chat-img1 pull-right">
-                     <img src="https://lh6.googleusercontent.com/-y-MY2satK-E/AAAAAAAAAAI/AAAAAAAAAJU/ER_hFddBheQ/photo.jpg" alt="User Avatar" class="img-circle">
-                     </span>
-                            <div class="chat-body1 clearfix">
-                                <p>Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old. Richard McClintock, a Latin professor at Hampden-Sydney College in Virginia.</p>
-                                <div class="chat_time pull-left">09:40PM</div>
-                            </div>
-                        </li>
-                        <li class="left clearfix admin_chat">
-                     <span class="chat-img1 pull-right">
-                     <img src="https://lh6.googleusercontent.com/-y-MY2satK-E/AAAAAAAAAAI/AAAAAAAAAJU/ER_hFddBheQ/photo.jpg" alt="User Avatar" class="img-circle">
-                     </span>
-                            <div class="chat-body1 clearfix">
-                                <p>Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old. Richard McClintock, a Latin professor at Hampden-Sydney College in Virginia.</p>
-                                <div class="chat_time pull-left">09:40PM</div>
-                            </div>
-                        </li>
+                            </tbody>
+                        </table>
+                    </div><!--chat_area-->
+                    <br>
+                    <div class="message_write">
+                        <textarea class="form-control" placeholder="Message..." id="name"></textarea>
+                        <div class="chat_bottom">
 
+                            <a id="send" class="btn btn-success pull-right" type="submit" onclick="sendName()">Send</a>
 
+                        </div>
 
-
-                    </ul>
-                </div><!--chat_area-->
-                <div class="message_write">
-                    <textarea class="form-control" placeholder="Message..."></textarea>
-                    <div class="chat_bottom">
-                        <a href="#" class="pull-right btn btn-success">
-                            Send
-                        </a>
                     </div>
-                    <br><br><br>
+
                 </div>
-
-
+            </div>
         </div>
     </div>
 </div>

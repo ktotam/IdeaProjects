@@ -1,6 +1,5 @@
 package pr.controllers;
 
-import org.json.simple.JSONObject;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.security.core.Authentication;
@@ -8,16 +7,12 @@ import org.springframework.stereotype.Controller;
 import org.springframework.ui.ModelMap;
 import org.springframework.web.bind.annotation.*;
 import org.springframework.web.multipart.MultipartFile;
-import pr.dto.MessageDto;
 import pr.dto.PostsDto;
 import pr.dto.UserDto;
 import pr.forms.*;
-import pr.models.Message;
 import pr.models.User;
 import pr.services.*;
-import org.json.simple.JSONObject;
 
-import javax.servlet.ServletOutputStream;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import java.io.File;
@@ -73,7 +68,7 @@ public class UsersController {
         List<UserDto> allUsers = usersService.getAllUsers();
         users.addAttribute("users", allUsers);
 
-        return "UsersPage";
+        return "AllUsersPage";
     }
 
     @GetMapping("/user")
@@ -88,7 +83,7 @@ public class UsersController {
             popularPosts.addAttribute("popularPosts", postsService.getPopularPosts());
             popularUsers.addAttribute("popularUsers", usersService.getPopularUsers());
             user.addAttribute("user", authenticationService.getUserByAuthentication(authentication));
-            return "UserPage";
+            return "MainUserPage";
         }
     }
 
@@ -102,6 +97,7 @@ public class UsersController {
             return "redirect:/user";
         }
 
+        System.out.println(request.getProtocol());
         selfId.addAttribute("selfId", authenticationService.getUserIdByAuthentication(authentication));
 
         List<Long> likes = postsService.getUsersPostsLikes(authenticationService.getUserIdByAuthentication(authentication));
@@ -118,7 +114,7 @@ public class UsersController {
         Boolean follow = usersService.checkFollow((authenticationService.getUserIdByAuthentication(authentication)), userId);
         isFollowed.addAttribute("isFollowed", follow);
         
-        return "PostsPage";
+        return "UsersPage";
     }
 
     @PostMapping("/user")
@@ -254,7 +250,7 @@ public class UsersController {
         }
         user.addAttribute("user", authenticationService.getUserByAuthentication(authentication));
         chatList.addAttribute("chatListUsers", authenticationService.getChatListByAuthentication(authentication));
-        return "Chatnew";
+        return "Chat";
     }
 
     @PostMapping("/chat/{user-id}")

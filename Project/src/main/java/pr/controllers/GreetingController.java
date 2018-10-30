@@ -30,7 +30,6 @@ public class GreetingController {
         messageService.newMessage(message.getText().substring(0, message.getText().indexOf('№')),
                 Long.parseLong(message.getText().substring(message.getText().indexOf('№')+1, message.getText().indexOf('|'))),
                 authenticationService.getUserIdByAuthentication(authentication));
-        System.out.println(message.getText());
         return new Greeting(HtmlUtils.htmlEscape(message.getText()));
     }
 

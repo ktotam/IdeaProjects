@@ -20,7 +20,7 @@
         <div class="navbar-header">
             <ul class="nav navbar-nav">
                 <li><a href="/user"><big>Home</big></a></li>
-                <li><a href="/msg/"><big>Messages</big></a></li>
+                <li><a href="/chat"><big>Chat</big></a></li>
                 <li><a href="/feed"><big>Feed</big></a></li>
             </ul>
         </div>
