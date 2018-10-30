@@ -87,7 +87,7 @@ public class UsersController {
         }
     }
 
-    @GetMapping("/users/{user-id}")
+    @GetMapping("/user{user-id}")
     public String getPage(Authentication authentication, @PathVariable("user-id") Long userId, HttpServletRequest request,
                           ModelMap isFollowed, ModelMap posts, ModelMap user, ModelMap selfId, ModelMap usersPostsLikes) {
         if (authentication == null) {
