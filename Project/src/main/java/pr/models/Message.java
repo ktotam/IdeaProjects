@@ -6,6 +6,7 @@ import lombok.Data;
 import lombok.NoArgsConstructor;
 
 import javax.persistence.*;
+import java.time.LocalDateTime;
 
 @Data
 @NoArgsConstructor
@@ -19,6 +20,7 @@ public class Message {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
+
     @ManyToOne
     @JoinColumn(name = "from_id")
     private User user;
@@ -26,6 +28,12 @@ public class Message {
     private Long toId;
 
     private String text;
+
+    private LocalDateTime date;
+
+    public String getStringDate() {
+        return date.toString().replace("T", " ");
+    }
 
     public Long getFromId() {
         return user.getId();

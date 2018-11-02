@@ -25,8 +25,8 @@
         <div class="navbar-header">
             <ul class="nav navbar-nav">
                 <li><a href="/user"><big>Home</big></a></li>
-                <li><a href="/feed"><big>Feed</big></a></li>
                 <li><a href="/chat"><b><big>Chat</big></b></a></li>
+                <li><a href="/feed"><big>Feed</big></a></li>
             </ul>
         </div>
         <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
@@ -60,14 +60,8 @@
                         <span class="chat-img pull-left">
                             <img src="${chatUser.getAvatarUrl()}" alt="User Avatar" class="img-circle">
                         </span>
-                        <div class="chat-body clearfix">
-                            <div class="header_sec">
-                                <strong class="primary-font">${chatUser.getName()}</strong> <strong class="pull-right">
-                                ${chatUser.getId()}   </strong>
-                            </div>
-                            <div class="contact_sec">
-                                <strong class="primary-font">(123) 123-456</strong> <span class="badge pull-right">${chatUser.getId()}</span>
-                            </div>
+                        <div>
+                            <h4><strong>${chatUser.getName()}</strong></h4>
                         </div>
                     </li>
                     </#list>

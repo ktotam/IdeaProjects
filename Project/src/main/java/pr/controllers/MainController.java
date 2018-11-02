@@ -24,7 +24,7 @@ import java.util.List;
 
 
 @Controller
-public class UsersController {
+public class MainController {
 
     @Value("${storage.path}")
     private String storagePath;
@@ -256,4 +256,16 @@ public class UsersController {
         usersService.createChat(authenticationService.getUserIdByAuthentication(authentication), user2);
         return "redirect:/chat";
     }
+
+    @PostMapping("/awsupload")
+    public String awsUpload(Authentication authentication, HttpServletRequest request) {
+        avatarService.deleteAvatar(authenticationService.getUserIdByAuthentication(authentication));
+        avatarService.saveAvatar("aws", "aws", "image/jpeg", request.getHeader("url"),
+                authenticationService.getUserIdByAuthentication(authentication));
+        usersService.addAvatarUrl(request.getHeader("url"),
+                authenticationService.getUserIdByAuthentication(authentication));
+        System.out.println(request.getHeader("url"));
+        return request.getHeader("url");
+    }
+
 }

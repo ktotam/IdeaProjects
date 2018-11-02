@@ -18,16 +18,15 @@ function setConnected(connected, toId, userId) {
         var s = JSON.parse(req.response);
         for (var i = 0; i < s.messages.length; i++) {
             if (userId == s.messages[i].from_id)
-                $("#greetings").append("<tr><td style='background-color: #e8f5fc'>" + s.messages[i].text + "</td></tr>");
+                $("#greetings").append("<tr><td style='background-color: #e8f5fc'>" + s.messages[i].text + "<small class='pull-right text-muted'>" + s.messages[i].date_time + "</small></td></tr>");
             else
-                $("#greetings").append("<tr><td style='background-color: #ebebeb'>" + s.messages[i].text + "</td></tr>");
+                $("#greetings").append("<tr><td style='background-color: #ebebeb'>" + s.messages[i].text + "<small class='pull-right text-muted'>" + s.messages[i].date_time + "</small></td></tr>");
         }
     }
     req.send();
 }
 
 function connect(toId, userId, chatName, avatarUrl) {
-
 
     if (stompClient !== null) {
         stompClient.disconnect();
@@ -46,20 +45,18 @@ function connect(toId, userId, chatName, avatarUrl) {
     document.getElementById('chatName').innerHTML = chatName;
     document.getElementById('avatarUrl').src = avatarUrl;
     document.getElementById('avatarUrl').style.display = '';
-
-
-
 }
 
 function disconnect() {
+
     if (stompClient !== null) {
         stompClient.disconnect();
     }
     setConnected(false);
-
 }
 
 function sendName(toId, userId) {
+
     if ($("#name").val() != "") {
         stompClient.send("/app/hello", {}, JSON.stringify({'name': $("#name").val() + "№" + toId + "|" + userId}));
         document.getElementById('name').value = '';
@@ -68,15 +65,21 @@ function sendName(toId, userId) {
 
 function showGreeting(message, userId, chatUserId) {
 
-    if(userId == message.substring(message.indexOf("№") + 1, message.indexOf("|")) && chatUserId == message.substring(message.indexOf("|") + 1, message.length)) {
-        $("#greetings").append("<tr><td style='background-color: #ebebeb'>" + message.substring(0, message.indexOf("№")) + "</td></tr>");
+    if(userId == message.substring(message.indexOf("№") + 1, message.indexOf("|")) && chatUserId == message.substring(message.indexOf("|") + 1, message.indexOf("~"))) {
+        $("#greetings").append("<tr><td style='background-color: #ebebeb'>" + message.substring(0, message.indexOf("№")) + "<small class='pull-right text-muted'>" + message.substring(message.indexOf("~")+1, message.length) + "</small></td></tr>");
     }
-    if(userId == message.substring(message.indexOf("|") + 1, message.length)) {
-        $("#greetings").append("<tr><td style='background-color: #e8f5fc'>" + message.substring(0, message.indexOf("№")) + "</td></tr>");
+    if(userId == message.substring(message.indexOf("|") + 1, message.indexOf("~"))) {
+        $("#greetings").append("<tr><td style='background-color: #e8f5fc'>" + message.substring(0, message.indexOf("№")) + "<small class='pull-right text-muted'>" + message.substring(message.indexOf("~")+1, message.length) + "</small></td></tr>");
     }
 }
 
 $(function () {
+
+    document.getElementById("name").addEventListener("keydown", function (ev) {
+        if (ev.key === '№' || ev.key === '|' || ev.key ==='~') {
+            ev.preventDefault();
+        }
+    });
     $("form").on('submit', function (e) {
         e.preventDefault();
     });

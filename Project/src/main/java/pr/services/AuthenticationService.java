@@ -7,6 +7,7 @@ import pr.dto.UserDto;
 import pr.models.Avatar;
 
 import java.util.List;
+import java.util.Map;
 
 public interface AuthenticationService {
     List<PostsDto> getUserPostsByAuthentication(Authentication authentication);
@@ -15,11 +16,8 @@ public interface AuthenticationService {
 
     String getLoginByAuthentication(Authentication authentication);
 
-    String getNameByAuthentication(Authentication authentication);
-
     UserDto getUserByAuthentication(Authentication authentication);
 
-    Avatar getAvatarByAuthentication(Authentication authentication);
-
     List getChatListByAuthentication(Authentication authentication);
+
 }

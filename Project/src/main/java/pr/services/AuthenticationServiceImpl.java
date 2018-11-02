@@ -13,6 +13,7 @@ import pr.security.details.UserDetailsImpl;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Map;
 
 @Component
 public class AuthenticationServiceImpl implements AuthenticationService {
@@ -26,19 +27,13 @@ public class AuthenticationServiceImpl implements AuthenticationService {
     @Autowired
     private UsersRepository usersRepository;
 
-    @Autowired
-    private AvatarRepository avatarRepository;
-
-    @Autowired
-    private MessageRepository messageRepository;
-
     @Override
     public List<PostsDto> getUserPostsByAuthentication(Authentication authentication) {
         UserDetailsImpl userDetails = (UserDetailsImpl) authentication.getPrincipal();
         List<Posts> reposts = postsRepository.findReposts(userDetails.getId());
 
 
-       List<PostsDto> postsDtos = new ArrayList<>();
+        List<PostsDto> postsDtos = new ArrayList<>();
 
         for (Posts tempPost : reposts) {
             postsDtos.add(PostsDto.builder()
@@ -70,27 +65,10 @@ public class AuthenticationServiceImpl implements AuthenticationService {
     }
 
     @Override
-    public String getNameByAuthentication(Authentication authentication) {
-        UserDetailsImpl userDetails = (UserDetailsImpl) authentication.getPrincipal();
-
-        return userDetails.getName();
-    }
-
-    @Override
     public UserDto getUserByAuthentication(Authentication authentication) {
         UserDetailsImpl userDetails = (UserDetailsImpl) authentication.getPrincipal();
         User user = usersRepository.findById(userDetails.getId()).orElse(null);
         return UserDto.from(user);
-    }
-
-    @Override
-    public Avatar getAvatarByAuthentication(Authentication authentication) {
-        UserDetailsImpl userDetails = (UserDetailsImpl) authentication.getPrincipal();
-        Avatar avatar = avatarRepository.findOneByUserId(userDetails.getId());
-        if (avatar == null) {
-            return avatarRepository.findOneByUserId(0L);
-        }
-        return avatar;
     }
 
     @Override
@@ -99,6 +77,7 @@ public class AuthenticationServiceImpl implements AuthenticationService {
         List<User> chatList = usersRepository.getChatListByUserId(userDetails.getId());
         return chatList;
     }
+
 
 
 }

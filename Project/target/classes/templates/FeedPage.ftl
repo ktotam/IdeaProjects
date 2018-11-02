@@ -20,7 +20,7 @@
         <div class="navbar-header">
             <ul class="nav navbar-nav">
                 <li><a href="/user"><big>Home</big></a></li>
-                <li><a href="/msg/"><big>Messages</big></a></li>
+                <li><a href="/chat"><big>Chat</big></a></li>
                 <li><a href="/feed"><b><big>Feed</big></b></a></li>
             </ul>
         </div>
@@ -67,7 +67,7 @@
             <div class="panel-body">
                 <div class="list-group">
                         <#list popularPosts as popularPost>
-                            <a href="/users/${popularPost.userId}" class="list-group-item">${popularPost.post}</a>
+                            <a href="/user${popularPost.userId}" class="list-group-item">${popularPost.post}</a>
                         </#list>
                 </div>
             </div>
@@ -78,7 +78,7 @@
             <div class="panel-body">
                 <div class="list-group">
                         <#list popularUsers as popularUser>
-                            <a href="/users/${popularUser.id}" class="list-group-item">${popularUser.name}</a>
+                            <a href="/user${popularUser.id}" class="list-group-item">${popularUser.name}</a>
                         </#list>
                 </div>
             </div>
@@ -90,11 +90,11 @@
 
         <div class="panel panel-default" >
                 <div class="panel-heading" style="min-height: 70px">
-                    <a class="pull-left" href="/users/${post.userId}">
-                        <img class="img-circle" width="45" src=${post.getAvatarUrl()}/>
+                    <a class="pull-left" href="/user${post.userId}">
+                        <img class="img-circle" width="45" src=${post.getAvatarUrl()}>
                     </a>
                     <div class="pull-left">
-                        <a href="/users/${post.getUserId()}" style="text-decoration: none; cursor: pointer"><b>&nbsp<big>${post.getUserName()}</big></b></a>
+                        <a href="/user${post.getUserId()}" style="text-decoration: none; cursor: pointer"><b>&nbsp<big>${post.getUserName()}</big></b></a>
                         <br>
                         <span class="text-muted">&nbsp<small>${post.date.toLocalDate()} ${post.date.toLocalTime()}</small></span>
                     </div>

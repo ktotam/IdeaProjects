@@ -46,7 +46,7 @@ function show(userId)
     req.open('POST', '/chat/' + userId, true);
     req.send();
     req.onload = () => {
-        window.location.href = "https://app-sn.herokuapp.com/chat";
+        window.location.href = "/chat";
     }
 }
 function follow(toId, follow, unfollow) {
@@ -90,5 +90,6 @@ $(function search() {
             else document.getElementById(data[i].id).style.display ='';
 
         }
-    }
+    };
+
 });

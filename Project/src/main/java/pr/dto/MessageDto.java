@@ -12,19 +12,24 @@ import pr.models.Message;
 @Builder
 public class MessageDto {
 
-    private Long toId;
-    private Long fromId;
+    private Long userId;
+    private Long chatUserId;
+
     private String text;
-    private String avatarUrl;
-    private Long id;
+
+    public static MessageDto to(Message model) {
+        return MessageDto.builder()
+                .text(model.getText())
+                .chatUserId(model.getFromId())
+                .userId(model.getToId())
+                .build();
+    }
 
     public static MessageDto from(Message model) {
         return MessageDto.builder()
-                .id(model.getId())
                 .text(model.getText())
-                .toId(model.getToId())
-                .fromId(model.getFromId())
-                .avatarUrl(model.getAvatarUrl())
+                .chatUserId(model.getToId())
+                .userId(model.getFromId())
                 .build();
     }
 }

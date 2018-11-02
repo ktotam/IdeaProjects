@@ -21,8 +21,8 @@
         <div class="navbar-header">
             <ul class="nav navbar-nav">
                 <li><a href="/user"><b><big>Home</big></b></a></li>
-                <li><a href="/feed"><big>Feed</big></a></li>
                 <li><a href="/chat"><big>Chat</big></a></li>
+                <li><a href="/feed"><big>Feed</big></a></li>
             </ul>
         </div>
         <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
@@ -103,7 +103,7 @@
 
                 <div class="panel-heading" style="min-height: 70px">
                     <a class="pull-left" href="/user${post.userId}">
-                        <img class="img-circle" width="45" src=${post.getAvatarUrl()}/>
+                        <img class="img-circle" width="45" src=${post.getAvatarUrl()}>
                     </a>
                     <div class="pull-left">
                         <a href="/user${post.getUserId()}" style="text-decoration: none; cursor: pointer"><b>&nbsp<big>${post.getUserName()}</big></b></a>

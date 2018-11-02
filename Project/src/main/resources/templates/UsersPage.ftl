@@ -82,7 +82,7 @@
             <div class="panel panel-default" >
                 <div class="panel-heading" style="min-height: 70px">
                     <a class="pull-left" href="/user${post.userId}">
-                        <img class="img-circle" width="45" src=${post.getAvatarUrl()}/>
+                        <img class="img-circle" width="45" src=${post.getAvatarUrl()}>
                     </a>
                     <div class="pull-left">
                         <a href="/user${post.getUserId()}" style="text-decoration: none; cursor: pointer"><b>&nbsp<big>${post.getUserName()}</big></b></a>

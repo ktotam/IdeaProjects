@@ -13,9 +13,11 @@ import pr.chat.Greeting;
 import pr.services.AuthenticationService;
 import pr.services.MessageService;
 
-@Controller
-public class GreetingController {
+import java.time.LocalDateTime;
+import java.time.temporal.ChronoUnit;
 
+@Controller
+public class ChatController {
 
     @Autowired
     private AuthenticationService authenticationService;
@@ -27,10 +29,11 @@ public class GreetingController {
     @SendTo("/topic/greetings")
     public Greeting greeting(Authentication authentication, HelloMessage message) throws Exception {
         Thread.sleep(1000);
+        LocalDateTime dateTime = LocalDateTime.now().truncatedTo(ChronoUnit.SECONDS);
         messageService.newMessage(message.getText().substring(0, message.getText().indexOf('№')),
                 Long.parseLong(message.getText().substring(message.getText().indexOf('№')+1, message.getText().indexOf('|'))),
-                authenticationService.getUserIdByAuthentication(authentication));
-        return new Greeting(HtmlUtils.htmlEscape(message.getText()));
+                authenticationService.getUserIdByAuthentication(authentication), dateTime);
+        return new Greeting(HtmlUtils.htmlEscape(message.getText() + "~" + dateTime.toString().replace('T', ' ')));
     }
 
 }
