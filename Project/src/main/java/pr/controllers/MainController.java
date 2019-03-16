@@ -1,5 +1,6 @@
 package pr.controllers;
 
+import org.openqa.selenium.WebDriver;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.security.core.Authentication;
@@ -28,6 +29,7 @@ public class MainController {
 
     @Value("${storage.path}")
     private String storagePath;
+
 
     @Autowired
     private UsersService usersService;
@@ -169,6 +171,7 @@ public class MainController {
 
     @PostMapping("/edit")
     public String profileEdit(UserForm user, Authentication authentication) {
+        System.out.println(usersService);
         usersService.updateUser(user, authenticationService.getUserIdByAuthentication(authentication));
         return "redirect:/user";
     }

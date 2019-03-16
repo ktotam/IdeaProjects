@@ -120,6 +120,7 @@
                 <div class="panel-body">
                     <div class="media">
                         <div class="media-body">
+                            <form>
                                 <div class="form-group">
                                     <label for="Name">Name</label>
                                     <input type="text" class="form-control" name="name" maxlength="255" autocomplete="off">
@@ -132,7 +133,7 @@
                                 <div>
                                     <input type="submit" formaction="/edit" formmethod="post" class="btn btn-default" value="Submit">
                                 </div>
-
+                                <form>
                         </div>
                     </div>
                 </div>
